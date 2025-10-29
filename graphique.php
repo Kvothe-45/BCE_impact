@@ -1,7 +1,7 @@
 <?php
 	include 'bd.php';
 	$bdd = getBD();
-	$rep = $bdd->query("select nom_pays from pays");
+	$rep = $bdd->query("SELECT nom_pays FROM pays ORDER BY nom_pays ASC");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,40 +25,41 @@
       <h3>Pays</h3>
       <div id="pays">
         <?php while ($ligne = $rep->fetch()) { ?>
-          <label><input type="checkbox" value="<?php echo strtolower(str_replace(' ', '-', $ligne['nom_pays'])); ?>" <?php if ($ligne['nom_pays'] == 'France') echo 'checked'; ?>> <?php echo $ligne['nom_pays']; ?></label>
+          <label><input type="checkbox" name="pays" value="<?php echo $ligne['nom_pays']; ?>"><?php echo $ligne['nom_pays']; ?></label>
 			  <?php } 
 			  $rep -> closeCursor(); ?>
       </div>
-      <button id="update">Mettre à jour le graphique</button>
+      <button id="update" onclick="afficherGraphique()">Mettre à jour le graphique</button>
     </div>
 
   <script>
     const ctx = document.getElementById('graph').getContext('2d');
     let chart;
 
-    //charger les données depuis la base
-    async function chargerInflation() {
-      const resp = await fetch('requete.php');
+    async function chargerInflation(pays) {
+      const resp = await fetch('requete.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'pays=' + pays
+      });
       const data = await resp.json();
-
-    //convertir les données SQL en format lisible pour Chart.js
-      const labels = data.map(row => new Date(row.date));
-      const valeurs = data.map(row => parseFloat(row.inflation));
-      return { labels, valeurs };
+      return data;
     }
 
-    //dessiner le graphique
     async function afficherGraphique() {
-      const { labels, valeurs } = await chargerInflation();
-
+      const paysChoisi = document.querySelector('input[name="pays"]:checked').value;
+      const data = await chargerInflation(paysChoisi);
+      const labels = data.map(row => new Date(row.date));
+      const valeurs = data.map(row => parseFloat(row.inflation));
       if (chart) chart.destroy();
-
       chart = new Chart(ctx, {
         type: 'line',
         data: {
           labels: labels,
           datasets: [{
-            label: 'France – Inflation (%)',
+            label: paysChoisi + ' – Inflation (%)',
             data: valeurs,
             borderColor: '#0055ff',
             backgroundColor: 'rgba(0,85,255,0.1)',
@@ -69,16 +70,14 @@
           responsive: true,
           plugins: {
             legend: { position: 'bottom' },
-            title: { display: true, text: 'Inflation - France' }
+            title: { display: true, text: 'Inflation - ' + paysChoisi }
           },
           scales: {
             x: {
               type: 'time',
               time: {
                 unit: 'year',
-                displayFormats: {
-                  year: 'yyyy'
-                }
+                displayFormats: { year: 'yyyy' }
               },
               title: { display: true, text: 'Année' }
             },
@@ -88,6 +87,6 @@
       });
     }
     afficherGraphique();
-</script>
+  </script>
 </body>
 </html>

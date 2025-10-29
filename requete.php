@@ -2,11 +2,13 @@
     header('Content-Type: application/json');
     include 'bd.php';
     $bdd = getBD();
-    $sql = "SELECT date, inflation FROM inflation 
-            WHERE pays = 'France'
+    $pays = $_POST['pays'];
+    $sql = "SELECT date, inflation 
+            FROM inflation 
+            WHERE pays = :pays
             ORDER BY date ASC";
-    $stmt = $bdd->query($sql);
+    $stmt = $bdd->prepare($sql);
+    $stmt->execute(['pays' => $pays]);
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
     echo json_encode($data);
 ?>
