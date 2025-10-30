@@ -3,8 +3,19 @@
     include 'bd.php';
     $bdd = getBD();
     $pays = $_POST['pays'];
-    $sql = "SELECT date, inflation 
-            FROM inflation 
+    $table = $_POST['indicateur'];
+    if($table == "chomage"){
+        $ind = $table."_pourcent";
+    }else{
+        $ind = $table;
+    }
+    if($table == "chomage" || $table == "dette"){
+        $time = "annee";
+    }else{
+        $time = "date";
+    }
+    $sql = "SELECT $time AS date, $ind AS valeur 
+            FROM $table 
             WHERE pays = :pays
             ORDER BY date ASC";
     $stmt = $bdd->prepare($sql);
