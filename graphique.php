@@ -45,33 +45,55 @@
         body: 'pays=' + pays + '&indicateur=' + indicateur
       });
       const data = await resp.json();
-      return data;
+      return {pays, data};
     }
 
     async function afficherGraphique() {
-      const paysChoisi = document.querySelector('input[name="pays"]:checked').value;
+      const paysChoisi = Array.from(document.querySelectorAll('input[name="pays"]:checked')).map(cb => cb.value);
       const indChoisi = document.querySelector('input[name="ind"]:checked').value;
-      const data = await chargerDonnees(paysChoisi, indChoisi);
-      const labels = data.map(row => new Date(row.date));
-      const valeurs = data.map(row => parseFloat(row.valeur));
+      if (paysChoisi.length === 0) {
+        alert("Veuillez sélectionner au moins un pays.");
+        return;
+      }
+      const couleurs = [
+        '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
+        '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf',
+        '#393b79', '#637939', '#8c6d31', '#843c39', '#7b4173',
+        '#5254a3', '#9c9ede', '#6b6ecf', '#e6550d', '#fd8d3c',
+        '#31a354', '#74c476', '#9e9ac8', '#a1d99b', '#ff9896',
+        '#c7c7c7', '#98df8a'
+      ];
+      const datasets = [];
+
+      for (let i = 0; i < paysChoisi.length; i++) {
+        const pays = paysChoisi[i];
+        const { data } = await chargerDonnees(pays, indChoisi);
+      // 🔹 On crée des points (x = date, y = valeur)
+        const points = data.map(row => ({
+          x: new Date(row.date),
+          y: parseFloat(row.valeur)
+        }));
+        datasets.push({
+          label: pays + ' – ' + indChoisi,
+          data: points, // ✅ on envoie directement les couples (x, y)
+          borderColor: couleurs[i % couleurs.length],
+          backgroundColor: couleurs[i % couleurs.length] + '33',
+          fill: false,
+          tension: 0.3
+        });
+      }
+
       if (chart) chart.destroy();
       chart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: labels,
-          datasets: [{
-            label: paysChoisi + ' – ' + indChoisi,
-            data: valeurs,
-            borderColor: '#0055ff',
-            backgroundColor: 'rgba(0,85,255,0.1)',
-            tension: 0.3
-          }]
+          datasets: datasets
         },
         options: {
           responsive: true,
           plugins: {
             legend: { position: 'bottom' },
-            title: { display: true, text: indChoisi + ' - ' + paysChoisi }
+            title: { display: true, text: indChoisi + ' - ' + paysChoisi.join(', ') }
           },
           scales: {
             x: {
