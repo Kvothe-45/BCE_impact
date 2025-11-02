@@ -45,14 +45,14 @@
         body: 'pays=' + pays + '&indicateur=' + indicateur
       });
       const data = await resp.json();
-      return {pays, data};
+      return {pays, indicateur, data};
     }
 
     async function afficherGraphique() {
       const paysChoisi = Array.from(document.querySelectorAll('input[name="pays"]:checked')).map(cb => cb.value);
-      const indChoisi = document.querySelector('input[name="ind"]:checked').value;
-      if (paysChoisi.length === 0) {
-        alert("Veuillez sélectionner au moins un pays.");
+      const indChoisi = Array.from(document.querySelectorAll('input[name="ind"]:checked')).map(cb => cb.value);
+      if (paysChoisi.length === 0 || indChoisi.length === 0) {
+        alert("Veuillez sélectionner au moins un pays et un indicateur.");
         return;
       }
       const couleurs = [
@@ -64,23 +64,25 @@
         '#c7c7c7', '#98df8a'
       ];
       const datasets = [];
-
+      
       for (let i = 0; i < paysChoisi.length; i++) {
         const pays = paysChoisi[i];
-        const { data } = await chargerDonnees(pays, indChoisi);
-      // 🔹 On crée des points (x = date, y = valeur)
-        const points = data.map(row => ({
-          x: new Date(row.date),
-          y: parseFloat(row.valeur)
-        }));
-        datasets.push({
-          label: pays + ' – ' + indChoisi,
-          data: points, // ✅ on envoie directement les couples (x, y)
-          borderColor: couleurs[i % couleurs.length],
-          backgroundColor: couleurs[i % couleurs.length] + '33',
-          fill: false,
-          tension: 0.3
-        });
+        for(let j = 0; j < indChoisi.length; j++) {
+          const ind = indChoisi[j];
+          const { data } = await chargerDonnees(pays, ind);
+          const points = data.map(row => ({
+            x: new Date(row.date),
+            y: parseFloat(row.valeur)
+          }));
+          datasets.push({
+            label: pays + ' – ' + ind,
+            data: points,
+            borderColor: couleurs[i % couleurs.length],
+            backgroundColor: couleurs[i % couleurs.length] + '33',
+            fill: false,
+            tension: 0.3
+          });
+        }
       }
 
       if (chart) chart.destroy();
@@ -93,7 +95,7 @@
           responsive: true,
           plugins: {
             legend: { position: 'bottom' },
-            title: { display: true, text: indChoisi + ' - ' + paysChoisi.join(', ') }
+            title: { display: true, text: 'Indicateurs : ' + indChoisi.join(', ') + ' | Pays : ' + paysChoisi.join(', ') }
           },
           scales: {
             x: {
