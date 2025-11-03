@@ -63,24 +63,49 @@
         '#31a354', '#74c476', '#9e9ac8', '#a1d99b', '#ff9896',
         '#c7c7c7', '#98df8a'
       ];
+      function ajusterCouleur(couleur, facteur) {
+        let r = parseInt(couleur.substring(1, 3), 16);
+        let g = parseInt(couleur.substring(3, 5), 16);
+        let b = parseInt(couleur.substring(5, 7), 16);
+        r = Math.min(255, Math.max(0, r + (255 - r) * facteur));
+        g = Math.min(255, Math.max(0, g + (255 - g) * facteur));
+        b = Math.min(255, Math.max(0, b + (255 - b) * facteur));
+        return `#${Math.round(r).toString(16).padStart(2, '0')}${Math.round(g).toString(16).padStart(2, '0')}${Math.round(b).toString(16).padStart(2, '0')}`;
+      }
       const datasets = [];
-      
-      for (let i = 0; i < paysChoisi.length; i++) {
-        const pays = paysChoisi[i];
-        for(let j = 0; j < indChoisi.length; j++) {
-          const ind = indChoisi[j];
+      const scales = {};
+      const variationIndicateur = {
+        inflation: 0,
+        dette: 0.5,
+        chomage: -0.5
+      };
+      for (let j = 0; j < indChoisi.length; j++) {
+        const ind = indChoisi[j];
+        const axeId = `y${j === 0 ? '' : j}`;
+        scales[axeId] = {
+          type: 'linear',
+          position: j % 2 === 0 ? 'left' : 'right',
+          title: {display: true, text: ind},
+          grid: {drawOnChartArea: j === 0}
+        };
+        for(let i = 0; i < paysChoisi.length; i++) {
+          const pays = paysChoisi[i];
           const { data } = await chargerDonnees(pays, ind);
           const points = data.map(row => ({
             x: new Date(row.date),
             y: parseFloat(row.valeur)
           }));
+          const baseCouleur = couleurs[i % couleurs.length];
+          const facteur = variationIndicateur[ind] ?? 0;
+          const couleurModifiee = ajusterCouleur(baseCouleur, facteur);
           datasets.push({
             label: pays + ' – ' + ind,
             data: points,
-            borderColor: couleurs[i % couleurs.length],
-            backgroundColor: couleurs[i % couleurs.length] + '33',
+            borderColor: couleurModifiee,
+            backgroundColor: couleurModifiee + '33',
             fill: false,
-            tension: 0.3
+            tension: 0.3,
+            yAxisID: axeId
           });
         }
       }
@@ -93,6 +118,8 @@
         },
         options: {
           responsive: true,
+          interaction: {mode: 'index', intersect: false},
+          stacked: false,
           plugins: {
             legend: { position: 'bottom' },
             title: { display: true, text: 'Indicateurs : ' + indChoisi.join(', ') + ' | Pays : ' + paysChoisi.join(', ') }
@@ -106,7 +133,7 @@
               },
               title: { display: true, text: 'Année' }
             },
-            y: { title: { display: true, text: indChoisi } }
+            ...scales
           }
         }
       });
