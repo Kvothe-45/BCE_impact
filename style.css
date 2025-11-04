@@ -5,12 +5,10 @@
 }
 
 html, body {
-    height: 100%;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     position: relative;
-    height: 200vh;
 }   
 
 a {
@@ -42,7 +40,6 @@ a {
 }
 
 #menu-ferme:hover~#menu-ouvert{
-    display:block;
     width: 400px;
     height: 550px;
     position: fixed;
@@ -50,13 +47,13 @@ a {
     border-radius: 8px;
 }
 
-#menu-ouvert:hover{
-    display:block;
+#menu-ouvert{
     width: 400px;
     height: 550px;
-    position: fixed;
+    position: absolute;
     background-color: #588BAD;
     border-radius: 8px;
+    margin-top: -36px;
 }
 
 
@@ -106,6 +103,8 @@ footer {
     color:#2C33B3;
     bottom: 0;
     width: 100%;
+    border: black 3px solid;
+
 }
 
 footer ul{
