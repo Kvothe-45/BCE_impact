@@ -8,33 +8,36 @@
   <head>
     <meta charset="UTF-8">
     <title>Graphique</title>
+    <link rel="stylesheet" href="style_graph.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
+    <h1>Graphique</h1>
     <div id="graphique">
       <canvas id="graph"></canvas>
+      <p id="vide"></p>
     </div>
     <div id="filters">
       <h3>Indicateurs</h3>
       <div id="indicateurs">
-        <label><input type="checkbox" name="ind" value="inflation" checked> Inflation (%)</label>
-        <label><input type="checkbox" name="ind" value="dette"> Dette publique (% du PIB)</label>
-        <label><input type="checkbox" name="ind" value="chomage"> Chômage (%)</label>
+        <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="inflation"> Inflation (%)</label>
+        <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="dette"> Dette publique (% du PIB)</label>
+        <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="chomage"> Chômage (%)</label>
       </div>
       <h3>Pays</h3>
       <div id="pays">
         <?php while ($ligne = $rep->fetch()) { ?>
-          <label><input type="checkbox" name="pays" value="<?php echo $ligne['nom_pays']; ?>"<?= $ligne['nom_pays'] == 'France' ? 'checked' : '' ?>><?php echo $ligne['nom_pays']; ?></label>
+          <label><input type="checkbox" onclick="afficherGraphique()" name="pays" value="<?php echo $ligne['nom_pays']; ?>"><?php echo $ligne['nom_pays']; ?></label>
 			  <?php } 
 			  $rep -> closeCursor(); ?>
       </div>
-      <button id="update" onclick="afficherGraphique()">Mettre à jour le graphique</button>
     </div>
 
   <script>
     const ctx = document.getElementById('graph').getContext('2d');
-    let chart;
+    var chart;
 
     async function chargerDonnees(pays, indicateur) {
       const resp = await fetch('requete.php', {
@@ -51,8 +54,22 @@
     async function afficherGraphique() {
       const paysChoisi = Array.from(document.querySelectorAll('input[name="pays"]:checked')).map(cb => cb.value);
       const indChoisi = Array.from(document.querySelectorAll('input[name="ind"]:checked')).map(cb => cb.value);
+      $("#vide").html("");
       if (paysChoisi.length === 0 || indChoisi.length === 0) {
-        alert("Veuillez sélectionner au moins un pays et un indicateur.");
+        if (chart){
+          chart.destroy();
+        }
+        let mes;
+        if (paysChoisi.length === 0){
+          mes = "Veuillez sélectionner au moins un pays.";
+        }
+        if (indChoisi.length === 0){
+          mes = "Veuillez sélectionner au moins un indicateur.";
+        }
+        if (paysChoisi.length === 0 && indChoisi.length === 0){
+          mes = "Veuillez sélectionner au moins un pays et un indicateur.";
+        }
+        $("#vide").html(mes);
         return;
       }
       const couleurs = [
