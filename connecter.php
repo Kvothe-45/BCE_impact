@@ -3,6 +3,8 @@
     
 <title>connecter</title>
 </head>
+<?php include 'header.php'; ?> 
+
 <body>
 
 <?php
@@ -35,8 +37,19 @@ if ($client && password_verify($mdp, $client['mdp'])) {
     echo '<meta http-equiv="refresh" content="2;url=connexion.php">';
 }
 ?>
-
-
 </body>
+
+<footer>
+    <a href="Home.html">
+        <img src="images/logo.png" alt="Logo de BCE Impact">
+    </a>
+    <h2>Projet L3 MIASHS</h2>
+    <ul>
+        <li><a>Pour aller plus loin</a></li>
+        <li><a>Commentaires</a></li>
+        <li><a>Sources</a></li>
+        <li><a>Contact</a></li>
+    </ul>
+</footer>
 </html>
 

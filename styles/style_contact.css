@@ -1,0 +1,32 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+    text-align: center;
+    color :#2c33b3;
+  font-family: 'Lexend Tera';
+  font-size: 40px;
+}
+
+#block {
+  display: flex;
+  justify-content: center;
+}
+
+#image {
+  width: 30%;   
+  margin-top: 30px;
+}
+
+body{
+    background-color: #d7e6f0
+}
+
+p{
+    font-family: 'Lexend Exa';
+    font-size: 20px;
+    margin: 50px;
+    text-align: center;
+}
