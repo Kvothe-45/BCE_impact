@@ -8,8 +8,9 @@
 type="text/css" media="screen" />
 </head>
 <body>
-    
+    <?php include 'header.php'; ?> 
 
+  <div id="connexion">
 <?php
 session_start();
 if (!isset($_SESSION['CSRF_TOKEN'])) {
@@ -19,9 +20,7 @@ if (!isset($_SESSION['CSRF_TOKEN'])) {
 <form action="connecter.php" method="post" autocomplete="off">
 
 
-
-
-<h1>Connexion</h1>
+<h1 id="title">Connexion</h1>
 <div class="contenant">
   <form action="">
     <div class="input-box">
@@ -33,6 +32,23 @@ if (!isset($_SESSION['CSRF_TOKEN'])) {
 
 <p><input  type="submit" value="Connexion" class='envoyer'></p>
 <input type="hidden" name="csrf_token" value="<?php ($_SESSION['CSRF_TOKEN']); ?>">
+</form>
+</form>
 
+</div>
+</div>
+
+<footer>
+    <a href="Home.html">
+        <img src="images/logo.png" alt="Logo de BCE Impact">
+    </a>
+    <h2>Projet L3 MIASHS</h2>
+    <ul>
+        <li><a>Pour aller plus loin</a></li>
+        <li><a>Commentaires</a></li>
+        <li><a>Sources</a></li>
+        <li><a>Contact</a></li>
+    </ul>
+</footer>
 </body>
 </html>

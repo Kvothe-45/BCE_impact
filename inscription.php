@@ -10,8 +10,8 @@
 
 <body>
   <?php include 'header.php'; ?> 
-
-<h1> Inscription</h1>
+<div id="inscription">
+<h1 id="title"> Inscription</h1>
 <div class="contenant">
 <form id="formemail" action="enregistrement.php" method="post" autocomplete="off">
   <div class="content">
@@ -35,7 +35,8 @@
   <div class="savanier">
       <p class="requirement hidden success" id="mdp-reussit">Mot de passe valide !</p>
   </div>
-
+  </div>
+  </div>
   <button type="submit" class="envoyer">Enregistrement</button>
 </form>
 </div>
@@ -86,6 +87,7 @@ $(document).ready(function() {
   });
 });
 </script>
+</div>
 <footer>
     <a href="Home.html">
         <img src="images/logo.png" alt="Logo de BCE Impact">

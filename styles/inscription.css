@@ -1,6 +1,6 @@
 
- body>* {
-  border:blue solid 2px;
+ body{
+  background-color: #d7e6f0
 }
 
 
@@ -14,12 +14,12 @@ color:red;
 .savanier {
 color:green;
 }
-body {
+
+#inscription {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #d7e6f0
 }
 
 form {
@@ -66,18 +66,20 @@ form {
 p {
   margin: 0;
   padding: 0;
-  font-family: 'Lexend Exa';font-size: 15px;
+  font-family: 'Lexend Exa';
+  font-size: 15px;
 }
 
 .input-box p {
   margin-bottom: 15px; 
 }
 
-h1{
-     position: absolute;
-  top: 10%;
+#title{
+  position: absolute;
   left: 50%;
+  top: 10%;
   transform: translate(-50%, -50%); 
   color: #2c33b3;
   font-family: 'Lexend Tera';
-  font-size: 40px;}
+  font-size: 40px;
+}
