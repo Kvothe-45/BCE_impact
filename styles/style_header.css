@@ -84,6 +84,7 @@ a {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+
 footer {
     display: flex;
     align-items: center;
@@ -92,7 +93,6 @@ footer {
     border-top: 2px solid #8d8f9d;
     color:#2C33B3;
     width: 100%;
-    bottom: 0;
     height: 80px;
 }
 

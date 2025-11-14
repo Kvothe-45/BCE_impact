@@ -9,7 +9,7 @@
     
 <body>
     <?php include 'header.php'?>
-    <h2>Naissance de l'UE et de la BCE</h2>
+    <h2 id="h2his">Naissance de l'UE et de la BCE</h2>
     <div class="boite_histoire">
         <p>Fondée en 1951, la Communauté européenne du charbon et de l’acier  constitue le premier pas vers une paix durable. En 1957, le traité de  Rome établit la Communauté économique européenne (CEE) et ouvre une  nouvelle ère de coopération toujours plus étroite en Europe. Toutefois,  cette période marque également le début d’une guerre froide qui divise  le continent pendant plus de 40 ans.</p></br>
         <p> <span class="SGM"  >8 mai 1945 – Fin de la Seconde Guerre mondiale en Europe</br>
@@ -55,17 +55,19 @@ https://www.ecb.europa.eu/ecb/history-arts-culture/history/emu/html/index.fr.htm
 
 </body>
 
-<footer>
-    <a href="Home.html">
-        <img src="logo.png" alt="Logo de BCE Impact">
-    </a>
-    <h4>Projet L3 MIASHS</h4>
-    <ul>
-        <li><a>Pour aller plus loin</a></li>
-        <li><a>Commentaires</a></li>
-        <li><a>Sources</a></li>
-        <li><a>Contact</a></li>
-    </ul>
-</footer>
+<div id="footer">
+    <footer>
+        <a href="Home.php">
+            <img src="images/logo.png" alt="Logo de BCE Impact">
+        </a>
+        <h2>Projet L3 MIASHS</h2>
+        <ul>
+            <li><a href="sources.php">Pour aller plus loin</a></li>
+            <li><a href="commentaires.php">Commentaires</a></li>
+            <li><a href="sources.php">Sources</a></li>
+            <li><a href="quisommesnous.php">Contact</a></li>
+        </ul>
+    </footer>
+</div>
 
 </html>

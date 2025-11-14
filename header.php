@@ -23,14 +23,14 @@
             <h1 id="title-Menu">Menu</h1>
         </div>
         <ul>
-            <li><a href="Home.html">Accueil</a></li>
-            <li><a href="définitions.html">Définitions</a></li>
-            <li><a href="Statistiques.html">Statistiques</a></li>
-            <li><a href="BCE.html">La BCE et son histoire</a></li>
-            <li><a href="Pays_UE.html">Les pays de l'UE</a></li>
-            <li><a href="Commentaires.html">Commentaires</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-            <li><a href="Sources.html">Sources</a></li>
+            <li><a href="Home.php">Accueil</a></li>
+            <li><a href="definitions.php">Définitions</a></li>
+            <li><a href="graphique.php">Statistiques</a></li>
+            <li><a href="histoire.php">La BCE et son histoire</a></li>
+            <li><a href="histoire.php">Les pays de l'UE</a></li>
+            <li><a href="Commentaires.php">Commentaires</a></li>
+            <li><a href="quisommesnous.php">Contact</a></li>
+            <li><a href="sources.php">Sources</a></li>
         </ul>
     </div>
 </header>

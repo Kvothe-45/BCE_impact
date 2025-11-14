@@ -9,9 +9,7 @@
 <body>
 <?php include 'header.php'; ?> 
 
-    <div>
-        <h1>Définitions</h1>
-    </div>
+    <h1 id="titre">Définitions</h1>
     <img class="petit" src="Images/definition.png" alt="exemple de texte alternatif"/>
     <div class="boite_definitions">
     <p> <span class="Mot" >  Inflation :</span> <span class="definition"  > Déséquilibre économique se manifestant par une hausse durable du niveau général des prix </span></p>
@@ -24,18 +22,20 @@
     <p><span class="Mot">  Taux d'intérêt directeur :</span> <span class="definition"  > Taux fixé par la banque centrale pour influencer le coût des crédits dans l'économie.</span></p>    
     <p><span class="Mot">  Correlation :</span><span class="definition"  > Variation simultanée de deux variables dans le même sens (corrélation positive) ou en sens opposé (corrélation négative), elle est parfois appelée covariance.Cependant, la corrélation entre deux variables, telle qu'on peut l'observer sur un graphique, ne signifie pas forcément qu'il existe un lien de cause à effet. Deux variables peuvent varier ensemble sans qu'une ne cause directement l'autre ; il peut y avoir un facteur tiers ou une simple coïncidence. </span></p>
     </div>
-<footer>
-    <a href="Home.html">
-        <img src="images/logo.png" alt="Logo de BCE Impact">
-    </a>
-    <h2>Projet L3 MIASHS</h2>
-    <ul>
-        <li><a>Pour aller plus loin</a></li>
-        <li><a>Commentaires</a></li>
-        <li><a>Sources</a></li>
-        <li><a>Contact</a></li>
-    </ul>
-</footer>
+<div id="footer">
+    <footer>
+        <a href="Home.php">
+            <img src="images/logo.png" alt="Logo de BCE Impact">
+        </a>
+        <h2>Projet L3 MIASHS</h2>
+        <ul>
+            <li><a href="sources.php">Pour aller plus loin</a></li>
+            <li><a href="commentaires.php">Commentaires</a></li>
+            <li><a href="sources.php">Sources</a></li>
+            <li><a href="quisommesnous.php">Contact</a></li>
+        </ul>
+    </footer>
+</div>
 </body> 
 
 </html>

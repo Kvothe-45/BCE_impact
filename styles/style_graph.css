@@ -14,11 +14,6 @@ body{
 
 }
 
-#footer{
-    bottom: 0px;
-    position: fixed;
-  }
-
 #graphique {
   background: #fff;
   border-radius: 20px;

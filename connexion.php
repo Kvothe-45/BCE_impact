@@ -38,17 +38,19 @@ if (!isset($_SESSION['CSRF_TOKEN'])) {
 </div>
 </div>
 
-<footer>
-    <a href="Home.html">
-        <img src="images/logo.png" alt="Logo de BCE Impact">
-    </a>
-    <h2>Projet L3 MIASHS</h2>
-    <ul>
-        <li><a>Pour aller plus loin</a></li>
-        <li><a>Commentaires</a></li>
-        <li><a>Sources</a></li>
-        <li><a>Contact</a></li>
-    </ul>
-</footer>
+<div id="footer">
+    <footer>
+        <a href="Home.php">
+            <img src="images/logo.png" alt="Logo de BCE Impact">
+        </a>
+        <h2>Projet L3 MIASHS</h2>
+        <ul>
+            <li><a href="sources.php">Pour aller plus loin</a></li>
+            <li><a href="commentaires.php">Commentaires</a></li>
+            <li><a href="sources.php">Sources</a></li>
+            <li><a href="quisommesnous.php">Contact</a></li>
+        </ul>
+    </footer>
+</div>
 </body>
 </html>

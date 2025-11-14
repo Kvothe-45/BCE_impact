@@ -1,0 +1,24 @@
+#h2his{
+     position: absolute;
+  left: 35vw;
+  top: 8vh;  
+  color: #2c33b3;
+  font-family: 'Lexend Tera';
+  font-size: 2.5vw;
+  z-index: 2;
+}
+
+#carte{
+    width: 200px;
+}
+
+#boite_info{
+position: relative;
+top: 5%;
+  background-color:#d9dbfa; 
+  border-radius: 8px; 
+  padding: 25px; 
+  margin: 20px auto; 
+  width: 50%; 
+  line-height: 1.6;
+}

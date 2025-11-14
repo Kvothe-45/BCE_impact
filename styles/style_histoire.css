@@ -1,0 +1,82 @@
+
+#h2his{
+     position: absolute;
+  left: 35vw;
+  top: 10vh;  
+  color: #2c33b3;
+  font-family: 'Lexend Tera';
+  font-size: 2vw;
+  z-index: 2;
+}
+
+.boite_histoire{
+  position: relative;
+	top: 5%;
+  background-color:#d9dbfa
+; 
+  border-radius: 8px; 
+  padding: 25px; 
+  margin: 20px auto; 
+  width: 40%; 
+  line-height: 1.6;
+}
+
+
+.Guerre {
+  position: absolute;
+  top: 7%;
+  left: -17%;
+  width: 20%;
+  transform: rotate(4deg);
+}
+
+.Assemblée{
+    position: absolute;
+  top: 25%;
+  left: -17%;
+  width: 20%;
+  transform: rotate(-4deg);
+}
+
+.Carte{
+    position: absolute;
+  top: 45%;
+  left: -29%;
+  width: 30%;
+  transform: rotate(-6deg);
+
+}
+
+.OTAN{
+        position: absolute;
+  top: 15%;
+  left: 93%;
+  width: 20%;
+  transform: rotate(-6deg);
+}
+
+.Schuman{position: absolute;
+  top: 35%;
+  left: 95%;
+  width: 20%;
+  transform: rotate(-6deg);
+
+}
+
+.Parlement{position: absolute;
+  top: 55%;
+  left: 95%;
+  width: 20%;
+  transform: rotate(-6deg);
+
+
+}
+
+.billet{
+    position: absolute;
+  top: 5%;
+  left: 90%;
+  width: 20%;
+  transform: rotate(-15deg);
+
+}
