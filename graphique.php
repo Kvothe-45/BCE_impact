@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="graphique.js"></script>
   </head>
   <body>
     <h1>Graphique</h1>
@@ -24,7 +25,20 @@
       <div id="indicateurs">
         <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="inflation"> Inflation (%)</label>
         <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="dette"> Dette publique (% du PIB)</label>
-        <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="chomage"> Chômage (%)</label>
+        <label><input type="checkbox" onclick="chomage()"  value="chomage"> Chômage</label>
+        <div id="chom">
+          <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="chomage_pourcent"> Chômage (%)</label>
+          <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="chomage_nombre"> Chômage (millier de personnes)</label>
+        </div>
+      </div>
+      <h3>Période</h3>
+      <div id="periode">
+        <label>De :
+          <input type="number" id="anneeMin" value="1996" min="1996" max="2025" onchange="afficherGraphique()">
+        </label>
+        <label>À :
+          <input type="number" id="anneeMax" value="2025" min="1996" max="2025" onchange="afficherGraphique()">
+        </label>
       </div>
       <h3>Pays</h3>
       <div id="pays">
@@ -36,16 +50,29 @@
     </div>
 
   <script>
+    function chomage() {
+      const estCoche = $("input[value='chomage']").prop("checked");
+      if (estCoche) {
+        $("#chom").slideDown();
+      } else {
+        $("#chom").slideUp();
+        $("#chom input[type='checkbox']").prop("checked", false);
+        afficherGraphique();
+      }
+    }
+
     const ctx = document.getElementById('graph').getContext('2d');
     var chart;
 
     async function chargerDonnees(pays, indicateur) {
+      const anneeMin = document.getElementById("anneeMin").value;
+      const anneeMax = document.getElementById("anneeMax").value;
       const resp = await fetch('requete.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: 'pays=' + pays + '&indicateur=' + indicateur
+        body: 'pays=' + pays + '&indicateur=' + indicateur + '&anneeMin=' + anneeMin + '&anneeMax=' + anneeMax
       });
       const data = await resp.json();
       return {pays, indicateur, data};
@@ -94,7 +121,8 @@
       const variationIndicateur = {
         inflation: 0,
         dette: 0.5,
-        chomage: -0.5
+        chomage_pourcent: -0.45,
+        chomage_nombre: -0.75
       };
       for (let j = 0; j < indChoisi.length; j++) {
         const ind = indChoisi[j];
@@ -125,6 +153,11 @@
             yAxisID: axeId
           });
         }
+      }
+      if (datasets.every(ds => ds.data.length === 0)) {
+        if (chart) chart.destroy();
+        document.getElementById("vide").innerText = "Aucune donnée disponible pour la période sélectionnée.";
+        return;
       }
 
       if (chart) chart.destroy();

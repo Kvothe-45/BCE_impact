@@ -1,7 +1,8 @@
 h1 {
     text-align: center;
     color :#2c33b3;
-    font-family: 'Lexend Tera';font-size: 40px;
+    font-family: 'Lexend Tera';
+    font-size: 40px;
 }
 body{
     background-color: #d7e6f0
@@ -54,4 +55,14 @@ body{
 #vide {
   color: red;
   text-align: center;
+}
+#chom {
+  display: none;
+  margin-left: 25px;
+}
+#periode {
+  font-weight: 700;
+}
+#periode input {
+  border-radius: 5px;
 }
