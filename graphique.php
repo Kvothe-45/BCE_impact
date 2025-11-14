@@ -161,7 +161,7 @@
     afficherGraphique();
   </script>
     </div>  
-  <footer>
+  <footer id="footer">
     <a href="Home.html">
         <img src="images/logo.png" alt="Logo de BCE Impact">
     </a>
