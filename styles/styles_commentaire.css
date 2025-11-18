@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #971515;
+    color: #333;
+    position: relative;
+}   
+
+a {
+    cursor: pointer;
+}
+
+.title{
+     position: absolute;
+  left: 45%;  color: #2c33b3;
+  font-family: 'Lexend Tera';
+  font-size: 45px;}
+
+.lecommentaire{
+    position: absolute;
+    top:30%;
+  left: 45%;  
+  font-family: 'Lexend Tera';
+
+}
+
+.envoyer {
+  display: block;
+  width: 30%;
+  background: #4349FF;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  font-size: 25px;
+  font-weight: 600;
+  height: 45px;
+  cursor: pointer;
+}
+
+.ameliorer{
+    position: absolute;
+  left: 5%; 
+  top:20%; color: #2c33b3;
+  font-family: 'Lexend Tera';
+  font-size: 45px;
+}
+
+
+.daniel {
+  width: 600px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 35px;
+}
