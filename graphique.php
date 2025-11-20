@@ -25,7 +25,7 @@
       <div id="indicateurs">
         <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="inflation"> Inflation (%)</label>
         <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="dette"> Dette publique (% du PIB)</label>
-        <label><input type="checkbox" onclick="chomage()"  value="chomage"> Chômage</label>
+        <label><input type="checkbox" onclick="chomage()" value="chomage"> Chômage</label>
         <div id="chom">
           <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="chomage_pourcent"> Chômage (%)</label>
           <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="chomage_nombre"> Chômage (millier de personnes)</label>

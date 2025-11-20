@@ -9,7 +9,6 @@ function chomage() {
     }
 }
 
-const ctx = document.getElementById('graph').getContext('2d');
 var chart;
 
 async function chargerDonnees(pays, indicateur) {
@@ -27,6 +26,7 @@ async function chargerDonnees(pays, indicateur) {
 }
 
 async function afficherGraphique() {
+    const ctx = document.getElementById('graph').getContext('2d');
     const paysChoisi = Array.from(document.querySelectorAll('input[name="pays"]:checked')).map(cb => cb.value);
     const indChoisi = Array.from(document.querySelectorAll('input[name="ind"]:checked')).map(cb => cb.value);
     $("#vide").html("");
@@ -135,7 +135,8 @@ async function afficherGraphique() {
             }
         }
     });
+
 }
 $(document).ready(function(){
     afficherGraphique();
-})
+});
