@@ -4,16 +4,12 @@ h1 {
     font-family: 'Lexend Tera';
     font-size: 40px;
 }
-
-
 body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   border:blue solid 2px;
-
 }
-
 #graphique {
   background: #fff;
   border-radius: 20px;
@@ -62,4 +58,17 @@ body{
 #vide {
   color: red;
   text-align: center;
+}
+#chom {
+  display: none;
+  margin-left: 25px;
+}
+#periode {
+  font-weight: 700;
+}
+#periode input {
+  border-radius: 5px;
+}
+#footer {
+  margin-top: 380px;
 }
