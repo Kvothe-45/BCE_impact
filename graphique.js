@@ -9,15 +9,6 @@ function chomage() {
     }
 }
 
-function footer() {
-    if ($("#vide").html() == ""){
-        $("#footer").css("margin-top","60px");
-    }
-    else{
-        $("#footer").css("margin-top","380px");
-    }
-}
-
 function ajusterCouleur(couleur, facteur) {
     let r = parseInt(couleur.substring(1, 3), 16);
     let g = parseInt(couleur.substring(3, 5), 16);
@@ -64,7 +55,6 @@ async function afficherGraphique() {
             mes = "Veuillez sélectionner au moins un pays et un indicateur.";
         }
         $("#vide").html(mes);
-        footer();
         return;
     }
     const couleurs = [
@@ -116,7 +106,6 @@ async function afficherGraphique() {
     if (datasets.every(ds => ds.data.length === 0)) {
         if (chart) chart.destroy();
         document.getElementById("vide").innerText = "Aucune donnée disponible pour la période sélectionnée.";
-        footer();
         return;
     }
 
@@ -147,7 +136,6 @@ async function afficherGraphique() {
             }
         }
     });
-    footer();
 }
 $(document).ready(function(){
     afficherGraphique();
