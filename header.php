@@ -8,11 +8,11 @@
 </head>
 <header>
     <div id ="header-content">
-        <a href="Home.html">
+        <a href="Home.php">
             <img src="images/logo.png" alt="Logo de BCE Impact">
         </a>
         <h1>BCE Impact</h1>
-        <a href="histoire_BCE.html">
+        <a href="histoire.php">
             <img src="images/logo-ue.png" alt="Logo UE">
         </a>
     </div>
@@ -28,7 +28,7 @@
             <li><a href="graphique.php">Statistiques</a></li>
             <li><a href="histoire.php">La BCE et son histoire</a></li>
             <li><a href="histoire.php">Les pays de l'UE</a></li>
-            <li><a href="Commentaires.php">Commentaires</a></li>
+            <li><a href="commentaire.php">Commentaires</a></li>
             <li><a href="quisommesnous.php">Contact</a></li>
             <li><a href="sources.php">Sources</a></li>
         </ul>
