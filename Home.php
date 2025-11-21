@@ -11,12 +11,21 @@
     <meta charset="UTF-8">
     <title>BCE IMPACT</title>
     <link rel="stylesheet" href="styles/style_home.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <style>
+    #map { width: 90%; 
+      height: 400px; 
+      margin: auto;
+      z-index: 0;
+    }
+  </style>
 </head>
     
 <body>
     <?php include 'header.php'?>
     <h2 id="h2his">Carte intéractive des pays de l'Union Européenne</h2>
-    <img id="carte" src="images_histoire/carte.jpg" alt="carte interactive"/>
+    <div id="map"></div>
+
     <div id="boite_info">
         <h3 id="title_boite">La Banque centrale européenne : le gardien de l’euro</h3>
         <p id="par1">La Banque centrale européenne (BCE) est la banque centrale des pays de la zone euro. 
@@ -75,6 +84,36 @@
         </ul>
     </footer>
 </div>
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script>
+    // Initialisation de la carte centrée sur l'Europe
+    var map = L.map('map').setView([50, 10], 3.5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 10,
+    }).addTo(map);
+
+    // Gestionnaire de clic pour chaque pays : redirection vers URL basée sur le code ISO
+    function onEachCountry(feature, layer) {
+      layer.on('click', function(e) {
+        var iso = feature.properties.adm0_a3_us || feature.id;
+        if (iso) {
+            window.location.href = "pays.php?pays=" + iso;
+        }
+      });
+    }
+
+    // Chargement ici du GeoJSON des pays d'Europe (provenant de Natural Earth) 
+    fetch('custom.geo.json')
+      .then(res => res.json())
+      .then(data => {
+        L.geoJSON(data, {
+          style: { color: '#0A8999', weight: 1, fillOpacity: 0.3 },
+          onEachFeature: onEachCountry
+        }).addTo(map);
+      });
+  </script>
+
 </body>
 
 </html>

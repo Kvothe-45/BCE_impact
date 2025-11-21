@@ -26,7 +26,7 @@ if (!isset($_SESSION['CSRF_TOKEN'])) {
     <div class="input-box">
       <p>Email<input type="mail" name="email" value=""  /></p>
       <i class="ri-user-fill"></i>
-      <p>Mot de passe <INPUT type="text" name="mdp" value=""></p>
+      <p>Mot de passe <INPUT type="password" name="mdp" value=""></p>
     </div>
 
 

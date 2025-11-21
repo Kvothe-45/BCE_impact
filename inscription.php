@@ -78,7 +78,7 @@ $(document).ready(function() {
       success: function(response) {
         if (response.success) {
           $('#message').html('<p class="success">' + response.message + '</p>');
-          setTimeout(() => { window.location.href = 'index.php'; }, 1000);
+          setTimeout(() => { window.location.href = 'Home.php'; }, 1000);
         } else {
           $('#message').html('<p class="error">' + response.message + '</p>');
         }
