@@ -4,14 +4,11 @@ h1 {
     font-family: 'Lexend Tera';
     font-size: 40px;
 }
-
-
 body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  border:blue solid 2px;
-
+  height: 115vh;
 }
 
 #footer{
@@ -69,4 +66,19 @@ body{
 #vide {
   color: red;
   text-align: center;
+}
+#chom {
+  display: none;
+  margin-left: 25px;
+}
+#periode {
+  font-weight: 700;
+}
+#periode input {
+  border-radius: 5px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

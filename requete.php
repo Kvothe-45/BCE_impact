@@ -3,23 +3,38 @@
     include 'bd.php';
     $bdd = getBD();
     $pays = $_POST['pays'];
-    $table = $_POST['indicateur'];
-    if($table == "chomage"){
-        $ind = $table."_pourcent";
+    $ind = $_POST['indicateur'];
+    $anneeMin = $_POST['anneeMin'];
+    $anneeMax = $_POST['anneeMax'];
+    if($ind == "chomage_pourcent" || $ind == "chomage_nombre"){
+        $table = "chomage";
     }else{
-        $ind = $table;
+        $table = $ind;
     }
     if($table == "chomage" || $table == "dette"){
         $time = "annee";
     }else{
         $time = "date";
     }
-    $sql = "SELECT $time AS date, $ind AS valeur 
+    if($table == "inflation"){
+        $sql = "SELECT $time AS date, $ind AS valeur 
             FROM $table 
             WHERE pays = :pays
+            AND YEAR($time) BETWEEN :amin AND :amax
             ORDER BY date ASC";
-    $stmt = $bdd->prepare($sql);
-    $stmt->execute(['pays' => $pays]);
-    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }else{
+        $sql = "SELECT $time AS date, $ind AS valeur 
+            FROM $table 
+            WHERE pays = :pays
+            AND $time BETWEEN :amin AND :amax
+            ORDER BY date ASC";
+    }
+    $req = $bdd->prepare($sql);
+    $req->execute([
+        'pays' => $pays,
+        'amin' => $anneeMin,
+        'amax' => $anneeMax
+    ]);
+    $data = $req->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($data);
 ?>
