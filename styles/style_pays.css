@@ -1,0 +1,65 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.header-pays {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #003399;
+}
+.header-pays h1 { margin: 0; color: #003399; font-size: 2.5em; }
+.drapeau { width: 120px; }
+
+.carte-identite {
+    background-color: #eef2f9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #003399;
+}
+.carte-identite h2 { margin-top: 0; color: #003399; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        
+.grid-infos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+.info-box strong { display: block; color: #555; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; }
+.info-box span { display: block; font-size: 1.1em; font-weight: bold; color: #222; margin-top: 4px; }
+
+.section-contenu {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    line-height: 1.7;
+    text-align: justify;
+}
+.section-contenu h2 {
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+.section-contenu h3 { color: #003399; margin-top: 25px; font-size: 1.2em; }
+.section-contenu ul { padding-left: 20px; }
+.section-contenu li { margin-bottom: 8px; }
+
+.error-msg { text-align: center; color: #d9534f; font-size: 1.2em; padding: 50px; }

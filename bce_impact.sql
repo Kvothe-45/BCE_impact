@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : dim. 26 oct. 2025 à 11:02
+-- Généré le : dim. 23 nov. 2025 à 13:09
 -- Version du serveur : 5.7.24
 -- Version de PHP : 8.3.1
 
@@ -10528,44 +10528,60 @@ INSERT INTO `inflation` (`pays`, `date`, `inflation`) VALUES
 
 CREATE TABLE `pays` (
   `nom_pays` varchar(50) NOT NULL,
+  `code` varchar(3) NOT NULL,
   `date_adhésion_ue` date NOT NULL,
-  `devise` varchar(20) NOT NULL,
-  `code_devise` varchar(3) NOT NULL,
-  `annee_adoption_euro` year(4) DEFAULT NULL
+  `annee_adoption_euro` year(4) DEFAULT NULL,
+  `superficie` varchar(100) NOT NULL,
+  `population` varchar(100) NOT NULL,
+  `capitale` varchar(50) NOT NULL,
+  `langue` varchar(100) NOT NULL,
+  `monnaie` varchar(100) NOT NULL,
+  `etat` varchar(100) NOT NULL,
+  `membre` varchar(200) NOT NULL,
+  `media` varchar(100) NOT NULL,
+  `dette` varchar(100) NOT NULL,
+  `deficit` varchar(100) NOT NULL,
+  `zes` varchar(100) NOT NULL,
+  `histoire` text NOT NULL,
+  `geographie` text NOT NULL,
+  `economie` text NOT NULL,
+  `societe` text NOT NULL,
+  `politique` text NOT NULL,
+  `drapeau` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `pays`
 --
 
-INSERT INTO `pays` (`nom_pays`, `date_adhésion_ue`, `devise`, `code_devise`, `annee_adoption_euro`) VALUES
-('Allemagne', '1958-01-01', 'Euro', 'EUR', 1999),
-('Autriche', '1995-01-01', 'Euro', 'EUR', 1999),
-('Belgique', '1958-01-01', 'Euro', 'EUR', 1999),
-('Bulgarie', '2007-01-01', 'Lev bulgare', 'BGN', NULL),
-('Chypre', '2004-05-01', 'Euro', 'EUR', 2008),
-('Croatie', '2013-07-01', 'Euro', 'EUR', 2023),
-('Danemark', '1973-01-01', 'Couronne danoise', 'DKK', NULL),
-('Espagne', '1986-01-01', 'Euro', 'EUR', 1999),
-('Estonie', '2004-05-01', 'Euro', 'EUR', 2011),
-('Finlande', '1995-01-01', 'Euro', 'EUR', 1999),
-('France', '1958-01-01', 'Euro', 'EUR', 1999),
-('Grèce', '1981-01-01', 'Euro', 'EUR', 2001),
-('Hongrie', '2004-05-01', 'Forint hongrois', 'HUF', NULL),
-('Irlande', '1973-01-01', 'Euro', 'EUR', 1999),
-('Italie', '1958-01-01', 'Euro', 'EUR', 1999),
-('Lettonie', '2004-05-01', 'Euro', 'EUR', 2014),
-('Lituanie', '2004-05-01', 'Euro', 'EUR', 2015),
-('Luxembourg', '1958-01-01', 'Euro', 'EUR', 1999),
-('Malte', '2004-05-01', 'Euro', 'EUR', 2008),
-('Pays-Bas', '1958-01-01', 'Euro', 'EUR', 1999),
-('Pologne', '2004-05-01', 'Zloty polonais', 'PLN', NULL),
-('Portugal', '1986-01-01', 'Euro', 'EUR', 1999),
-('République Tchèque', '2004-05-01', 'Couronne tchèque', 'CZK', NULL),
-('Roumanie', '2007-01-01', 'Leu roumain', 'RON', NULL),
-('Slovaquie', '2004-05-01', 'Euro', 'EUR', 2009),
-('Slovénie', '2004-05-01', 'Euro', 'EUR', 2007),
-('Suède', '1995-01-01', 'Couronne suédoise', 'SEK', NULL);
+INSERT INTO `pays` (`nom_pays`, `code`, `date_adhésion_ue`, `annee_adoption_euro`, `superficie`, `population`, `capitale`, `langue`, `monnaie`, `etat`, `membre`, `media`, `dette`, `deficit`, `zes`, `histoire`, `geographie`, `economie`, `societe`, `politique`, `drapeau`) VALUES
+('Allemagne', 'DEU', '1958-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Autriche', 'AUT', '1995-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Belgique', 'BEL', '1958-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Bulgarie', 'BUL', '2007-01-01', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Chypre', 'CYP', '2004-05-01', 2008, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Croatie', 'CRO', '2013-07-01', 2023, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Danemark', 'DEN', '1973-01-01', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Espagne', 'ESP', '1986-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Estonie', 'EST', '2004-05-01', 2011, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Finlande', 'FIN', '1995-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('France', 'FRA', '1958-01-01', 1999, '638 475 km² ', '68,606  millions d’habitants ', 'Paris', 'Français', 'Euro (EUR) ', 'Ve République', 'Membre fondateur de l’Union européenne, Membre du Conseil de sécurité de l’ONU, de l’OTAN, de l’OCDE, de l’OSCE, des G8 et G20 ', 'Le Monde, Les Echos, ... ', '3 416,3 milliards d’euros, soit 115,6 % du PIB', '5,8 % du PIB ', '11.035.000 km² (2 plus grande mondiale, derrière les Etats Unis) ', '<h3>Histoire</h3><p>La région couverte par la France aujourd\'hui a été unie pour la première fois en 486 après J.-C., lorsque le roi Clovis I a réuni toutes les tribus germaniques sous le régime franc.</p>  <p>Après la Révolution française de 1789, la monarchie a été renversée et un système républicain a été mis en place. Le premier empire français a contrôlé presque la totalité de l\'Europe, concurrençant principalement le Royaume-Uni. Sous le Second Empire, le pays a connu le début de la révolution industrielle. Avec la IIIe République, la France est devenue un vaste empire colonial qui s\'étendait de l\'Afrique à l\'Asie.</p>  <p>En 1905 est adoptée la loi de séparation des Églises et de l\'État qui est considérée comme le texte fondateur de la laïcité en France. À la suite de la première et seconde guerre mondiale qui se terminèrent en 1945, la France participa à la création de l’OTAN (ou NATO) en 1949 mais la quittera en 1966 pour finalement la réintégrer en 2009.</p>  <p>En 1957, six pays, dont la France, fondent la Communauté économique européenne (CEE) et la Communauté européenne de l\'énergie atomique qui sont à l’origine de l’Union Européenne que nous connaissons (voir ici pour plus d’informations sur <a href=\"histoire.php\">l’histoire de la BCE</a>).</p>  <p>Le 4 octobre 1958, la France adopte la Ve République qui est toujours en place aujourd’hui. Au fil des années, elle a perdu plusieurs de ses colonies (tel que l’Algérie, avec laquelle les relations politiques sont aujourd’hui encore tendues) mais elle cherche à conserver un certain rayonnement international. Elle fut également partie des pays fondateurs de la Zone Euro en 1999 (voir plus d’info ici sur la <a href=\"histoire.php\">BCE</a>).</p>', '<h3>Géographie</h3><p>La plus grande partie de la France est située en <strong>Europe occidentale</strong>, bien qu\'elle possède des petits territoires disséminés à travers le monde : en Amérique du Nord, dans les Caraïbes, en Amérique du Sud, dans l\'océan Indien, dans le Pacifique et dans le sud du continent antarctique.</p>  <p>La France possède une nature riche et variée :</p> <ul>     <li><strong>Au Nord et à l\'Ouest :</strong> Des plaines côtières qui constituent les deux tiers de la surface du pays, bordées par la mer du Nord et l\'océan Atlantique.</li>     <li><strong>Au Sud-Ouest et Sud-Est :</strong> Des zones montagneuses, avec respectivement les Pyrénées et les Alpes.</li>     <li><strong>Au Centre :</strong> Une région définie par ses hauteurs rocheuses et ses vastes forêts.</li> </ul>', '<h3>Économie et investissements</h3> <ul>     <li><strong>Puissance :</strong> 2ème puissance économique d\'Europe et 5ème mondiale.</li>     <li><strong>Marché :</strong> 2ème marché européen.</li>     <li><strong>Tourisme :</strong> 1ère destination touristique au monde (près de 102 millions de touristes en 2024).</li>     <li><strong>Démographie :</strong> 1er pays européen en termes de natalité (1,78 enfant par femme en 2022).</li>     <li><strong>Main-d\'œuvre :</strong> Le coût est de 38,7 euros de l’heure (2020).</li>     <li><strong>Tertiarisation :</strong> L’économie repose largement sur les services (78,8 % du PIB), signe d\'une forte désindustrialisation.</li>     <li><strong>Notation :</strong> Standard and Poor\'s a réduit la note à A+, tandis que Moody\'s et Fitch maintiennent Aa3 (perspective négative).</li> </ul>  <h3>Santé et Protection Sociale</h3> <p>Le <strong>système de santé français</strong> est un système public, financé par les charges sociales imposées aux travailleurs et par les impôts, qui garantit à tous les citoyens le droit d\'accéder aux services de santé. Ce système est directement supervisé par le gouvernement, tant au niveau national que local.</p>  <p>Le système français de protection sociale assure à tous les résidents du pays une protection contre les risques sociaux. Ces protections sont assurées par de nombreuses institutions en fonction de chaque situation professionnelle individuelle ou en fonction du type de protection fournie.</p>  <p>De manière générale, la France offre les types de protection sociale suivants :</p> <ul>     <li><strong>Système de protection de base :</strong> Il est fourni par la sécurité sociale et France Travail (ex-Pôle Emploi).</li>     <li><strong>Régimes complémentaires :</strong> Via des organismes d\'assurance maladie pour lesquelles les inscriptions sont faites individuellement ; ils couvrent les frais médicaux qui ne sont pas couverts par le système de protection de base.</li>     <li><strong>Système de couverture maladie universelle (CMU/PUMA) :</strong> La France prend en charge les soins et la couverture médicale de toute personne vivant sur son territoire, même si cette personne n\'est pas en mesure d\'en supporter les frais financiers. Ce principe repose sur un fondement juridique adopté par la France qui prévoit des sanctions en cas de non-assistance à ceux qui en ont besoin.</li> </ul>', '<h3>Religions (2020)</h3> <p>La répartition religieuse est la suivante : majorité de sans religions (51%), Catholiques (29%), Musulmans (10%), autres Chrétiens (9%) et autres religions (1%).</p>  <h3>Modes de vie</h3> <p>En France, 93 % de la population vit dans l’une des 699 aires d’attraction des villes (dont 682 en métropole et 17 en Outre-mer). Avec 13 millions d’habitants, l’aire d’attraction de Paris concentre, à elle seule, près d’un habitant sur cinq.</p> <p>La <strong>cuisine française</strong> est une institution, reconnue par l\'UNESCO comme faisant partie du patrimoine culturel immatériel de l\'humanité.</p>  <h3>Le Sport</h3> <p>Les sports les plus suivis sont le football, le rugby et le tennis.</p> <p>La France rayonne par l\'organisation d\'événements majeurs :</p> <ul>     <li>Le <strong>Tour de France</strong>, la plus célèbre course de vélo au monde.</li>     <li>Plusieurs championnats de tennis (Roland-Garros).</li>     <li>La course automobile des <strong>24 Heures du Mans</strong>.</li> </ul>', '<h3>Population et politique</h3> <h4>Organisation des pouvoirs</h4> <p>La France est un régime démocratique composé de trois pouvoirs distincts :</p> <ul>     <li><strong>Le pouvoir exécutif :</strong> Il gère la politique courante de l\'État et assure l\'application de la loi élaborée par le législatif. Il est mené par le Président et le Premier ministre.</li>     <li><strong>Le pouvoir législatif :</strong> Il vote la loi, gère le budget de l\'État, et contrôle l\'action du pouvoir exécutif et judiciaire.</li>     <li><strong>Le pouvoir judiciaire :</strong> Il contrôle l\'application de la loi et sanctionne son non-respect. Ce pouvoir est confié aux juges et aux magistrats.</li> </ul>  <h4>Situation politique actuelle</h4> <p>Appartenant au parti politique Renaissance (situé au centre), <strong>Emmanuel MACRON</strong>, huitième et actuel président de la Ve République, a été élu le 7 mai 2017 et réélu le 24 avril 2022.</p> <p><a href=\"https://www.info.gouv.fr/composition-du-gouvernement\" target=\"_blank\">Voir la liste complète du gouvernement</a></p>  <p>À la suite de nombreuses polémiques telles que le mouvement des Gilets jaunes ou, plus récemment, la réforme repoussant l’âge de départ à la retraite, le gouvernement a vu ses soutiens s\'effriter, jusqu’à perdre la majorité absolue à l’Assemblée nationale.</p>', 'Images/france.png'),
+('Grèce', 'GRE', '1981-01-01', 2001, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Hongrie', 'HUN', '2004-05-01', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Irlande', 'IRL', '1973-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Italie', 'ITA', '1958-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Lettonie', 'LAT', '2004-05-01', 2014, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Lituanie', 'LTU', '2004-05-01', 2015, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Luxembourg', 'LUX', '1958-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Malte', 'MLT', '2004-05-01', 2008, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Pays-Bas', 'NED', '1958-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Pologne', 'POL', '2004-05-01', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Portugal', 'POR', '1986-01-01', 1999, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('République Tchèque', 'CZE', '2004-05-01', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Roumanie', 'ROU', '2007-01-01', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Slovaquie', 'SVK', '2004-05-01', 2009, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Slovénie', 'SLO', '2004-05-01', 2007, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('Suède', 'SWE', '1995-01-01', NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Index pour les tables déchargées
