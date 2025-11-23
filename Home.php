@@ -12,13 +12,6 @@
     <title>BCE IMPACT</title>
     <link rel="stylesheet" href="styles/style_home.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-  <style>
-    #map { width: 90%; 
-      height: 400px; 
-      margin: auto;
-      z-index: 0;
-    }
-  </style>
 </head>
     
 <body>
@@ -28,46 +21,41 @@
 
     <div id="boite_info">
         <h3 id="title_boite">La Banque centrale européenne : le gardien de l’euro</h3>
-        <p id="par1">La Banque centrale européenne (BCE) est la banque centrale des pays de la zone euro. 
+        <p id="par1">La Banque centrale européenne (BCE) est l'institution chargée de mener la politique monétaire au sein de la zone euro. La politique monétaire de la zone euro est définie par l'Eurosystème qui rassemble la BCE et les banques centrales des États membres de la zone euro.
         </p>
-        <p id="par2">
-        Son rôle principal est d’assurer la stabilité des prix, autrement dit veiller à ce que l’inflation — la hausse des prix — reste sous contrôle. Une inflation trop élevée rend la vie quotidienne chère, tandis qu’une inflation trop faible ou négative peut freiner l’économie.
-        </p>
-        <p id="par3">
-        En pratique, la BCE ne s’occupe pas des magasins ni des entreprises directement. Elle agit en coulisses pour que l’économie européenne reste stable et que l’euro conserve sa valeur.
-        </p>
-        Comment la BCE influence l’économie
+        <p id="par3">La BCE a pour mission de maintenir la stabilité des prix, gérer les réserves et conduire les opérations de change. La BCE est une institution indépendante vis-à-vis du pouvoir politique.
         </p>
         <p id="par2">
         La BCE dispose de plusieurs outils pour agir sur l’économie, et chacun a un impact direct ou indirect sur la vie quotidienne des citoyens et des entreprises.
         </p>
         <ul>
-            <li>1. Les taux d’intérêt</li>
-            <li class="listetitre">La BCE fixe le taux directeur, c’est-à-dire le taux auquel les banques peuvent emprunter de l’argent auprès d’elle.
+            <li class="outils">1. Les taux d’intérêt</li>
+            <li class="listetitre">La BCE fixe les taux directeurs, c’est-à-dire le taux auquel les banques peuvent emprunter de l’argent auprès d’elle.
             </li>
             <li class="mesuresBCE">Taux élevés → emprunter coûte plus cher → les ménages dépensent moins, les entreprises investissent moins → l’inflation ralentit.
             </li><li class="mesuresBCE">Taux bas → emprunter coûte moins cher → les ménages dépensent davantage, les entreprises investissent → l’économie se stimule.
             </li>
-            <li>2. Les opérations sur les marchés financiers</li>
+            <li class="outils">2. Les opérations sur les marchés financiers</li>
             <li class="listetitre">La BCE peut acheter ou vendre des obligations, qui sont des prêts consentis aux États ou aux entreprises :
             </li>
             <li class="mesuresBCE">Acheter des obligations injecte de l’argent dans l’économie, favorisant la consommation et l’investissement.
             </li><li class="mesuresBCE">Vendre des obligations retire de l’argent, aidant à freiner l’inflation si elle devient trop élevée.
             </li>
-            <li>3. Les mesures exceptionnelles</li>
-            <li class="listetitre">En période de crise — comme lors de la pandémie de 2020 — la BCE peut lancer des programmes spéciaux pour prêter directement aux banques ou aux États à des conditions avantageuses. Cela garantit que l’argent continue de circuler, évitant un effondrement économique.
+            <li class="outils">3. Les mesures exceptionnelles</li>
+            <li class="listetitre">En période de crise — comme lors de la crise des subprimes en 2008 ou plus récemment de la pandémie de covid de 2020 — la BCE peut utiliser de nouveaux instruments spéciaux tel que : </li>
+            <li class="mesuresBCE">Le "forward guidance" qui consiste à rendre public l'orientation future de la politique monétaire</li>
+            <li class="mesuresBCE">Proposer des taux d'intérêts négatifs aux banques (sous conditions)</li>
+            <li class="mesuresBCE">Des achats d'actifs en grande quantité qui contribuent à stimuler l'activité de prêt, les dépenses et les investissements dans l’économie </li>
+            <li class="mesuresBCE">Des "opérations de refinancement à plus long terme ciblées" qui conciste en des prêts à des taux favorables (sous conditions).
             </li>
-            L’impact sur notre quotidien
-            Même si la BCE agit loin des citoyens, ses décisions ont un effet concret :
-            Crédits et emprunts : un taux bas rend les prêts immobiliers et à la consommation moins chers, un taux haut les rend plus coûteux.
-            Prix des biens et services : une inflation maîtrisée empêche les hausses excessives des prix.
-            Stabilité économique : les entreprises peuvent planifier leurs investissements, et les États financer leurs projets sans que le coût explose.
-        </ul>
-
-        La BCE est le gardien de la stabilité de l’euro. Grâce à ses taux d’intérêt, ses achats et ventes de titres et ses mesures exceptionnelles, elle influence la quantité d’argent dans l’économie. Son objectif est simple : maintenir les prix stables pour permettre aux citoyens et aux entreprises de vivre et d’investir sereinement.
+            </ul>
+        <p>
+        La BCE est le gardien de la stabilité de l’euro. Grâce à tous ses outils (plus d'info <a href="https://www.ecb.europa.eu/mopo/strategy/strategy-review/html/monetary-policy-instruments.fr.html">ici</a>), elle influence la quantité d’argent dans l’économie. Elle a pour objectif principal de veiller à la stabilité des prix, étayant ainsi la croissance économique et la création d'emplois. Néanmoins, elle doit aussi jongler avec d'autres objectifs tel que l'écologie, la pollution, etc...
+        </p>
+        <p>
         En résumé, quand la BCE agit, elle protège l’euro et soutient l’économie européenne, même si ses décisions semblent lointaines ou abstraites. C’est un acteur clé pour que l’argent circule de manière saine et que l’économie reste équilibrée.
-
-    </div>
+        </p>
+      </div>
 
 
 <div id="footer">
@@ -87,14 +75,60 @@
 
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script>
+    const unionEuropeenne = [
+      "FRA","DEU","ITA","ESP","BEL","NLD","LUX","IRL","PRT","GRC",
+      "AUT","FIN","SWE","DNK","CZE","POL","HUN","SVK","SVN","HRV",
+      "EST","LVA","LTU","ROU","BGR","CYP","MLT"
+    ];
+
+    const zoneEuro = [
+      "FRA","DEU","ITA","ESP","BEL","NLD","LUX","IRL","PRT","GRC",
+      "AUT","FIN","EST","LVA","LTU","SVK","SVN","CYP","MLT","HRV"
+    ];
+    const candidatsUE = [
+        "ALB", "MKD", "MNE", "SRB", "BIH", "UKR", "MDA"
+        //"GEO", // Géorgie, candidature suspendue
+        //"TUR", // Turquie, candidature suspendue
+    ];
+    const paysQuitteUE = [
+    "GBR", "GRL"  
+    ];
     // Initialisation de la carte centrée sur l'Europe
-    var map = L.map('map').setView([50, 10], 3.5);
+    var map = L.map('map', {
+      worldCopyJump: false,
+      maxBounds: [
+          [-85, -180],
+          [85, 180]
+      ],
+      maxBoundsViscosity: 1.0
+    }).setView([46, 20], 3.6);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 10,
+      maxZoom: 8,
+      minZoom: 3,
     }).addTo(map);
+
+
+    function styleCountries(feature) {
+      const iso = feature.properties.adm0_a3_us || feature.id;
+
+      if (zoneEuro.includes(iso)) {
+          return { color: "#02354dff", fillColor: "#23189bff", weight: 1, fillOpacity: 0.8 }; // vert
+      } else if (unionEuropeenne.includes(iso)) {
+          return { color: "#02354dff", fillColor: "#04a381ff", weight: 1, fillOpacity: 0.8 }; // rouge
+      }else if (paysQuitteUE.includes(iso)) {
+          return { color: "#02354dff", fillColor: "#5b784cff", weight: 1, fillOpacity: 0.8 }; // rouge
+      }else if(candidatsUE.includes(iso)){
+          return { color: "#02354dff", fillColor: "#73e144ff", weight: 1, fillOpacity: 0.8 }; // jaune
+      }
+      return { color: "#02354dff", fillColor: "#bdc184ff", weight: 1, fillOpacity: 0.8 }; // autres pays
+    }
 
     // Gestionnaire de clic pour chaque pays : redirection vers URL basée sur le code ISO
     function onEachCountry(feature, layer) {
+      layer.bindTooltip(feature.properties.name, {
+      sticky: true
+      });
+      
       layer.on('click', function(e) {
         var iso = feature.properties.adm0_a3_us || feature.id;
         if (iso) {
@@ -103,12 +137,28 @@
       });
     }
 
+    var legend = L.control({ position: "bottomright" });
+    legend.onAdd = function (map) {
+      var div = L.DomUtil.create("div", "info legend");
+      
+      div.innerHTML += "<h4>Statut</h4>";
+      div.innerHTML += '<i style="background:#23189bff"></i> Zone Euro<br>';
+      div.innerHTML += '<i style="background:#04a381ff"></i> Union Européenne (hors Zone Euro)<br>';
+      div.innerHTML += '<i style="background:#73e144ff"></i> Candidats à l\'Union Européenne<br>';
+      div.innerHTML += '<i style="background:#5b784cff"></i> Pays ayant quitté l\'UE <br>';
+      div.innerHTML += '<i style="background:#bdc184ff"></i> Pays faisant partie de l\'Europe (hors UE)<br>';
+
+      return div;
+};
+
+legend.addTo(map);
+
     // Chargement ici du GeoJSON des pays d'Europe (provenant de Natural Earth) 
     fetch('custom.geo.json')
       .then(res => res.json())
       .then(data => {
         L.geoJSON(data, {
-          style: { color: '#0A8999', weight: 1, fillOpacity: 0.3 },
+          style: styleCountries,
           onEachFeature: onEachCountry
         }).addTo(map);
       });

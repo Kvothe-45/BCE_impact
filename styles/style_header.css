@@ -91,9 +91,15 @@ footer {
     justify-content: space-between;
     background-color: #588BAD;
     border-top: 2px solid #8d8f9d;
-    color:#2C33B3;
     width: 100%;
     height: 80px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke: 0.2px black; /* Bordure noire autour du texte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 footer ul{

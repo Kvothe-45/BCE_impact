@@ -1,6 +1,6 @@
 #h2his{
-     position: absolute;
-  left: 35vw;
+  position: absolute;
+  left: 18vw;
   top: 8vh;  
   color: #2c33b3;
   font-family: 'Lexend Tera';
@@ -12,13 +12,80 @@
     width: 200px;
 }
 
-#boite_info{
-position: relative;
-top: 5%;
-  background-color:#d9dbfa; 
-  border-radius: 8px; 
-  padding: 25px; 
-  margin: 20px auto; 
-  width: 50%; 
-  line-height: 1.6;
+#boite_info {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
+
+#boite_info h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.8rem;
+    color: #02354d;
+}
+
+#boite_info p {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+#boite_info ul {
+    margin: 20px 0 20px 0;
+    padding-left: 20px;
+}
+.outils {
+    list-style: none;
+    margin: 15px 0 0 30px;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    font-style: italic;
+  }
+
+#boite_info li {
+    margin-bottom: 10px;
+}
+
+.listetitre {
+    list-style: none;
+    font-weight: bold;
+    color: #02354d;
+}
+
+.mesuresBCE {
+    color: #333;
+    font-style: italic;
+}
+
+#map { 
+  width: 80%; 
+  height: 40vw; 
+  max-width: 1000px;
+  max-height:500px;
+  margin: auto;
+  z-index: 0;
+  margin-top: 30px;
+}
+
+.legend {
+  background: white;
+  padding: 10px;
+  line-height: 20px;
+  border-radius: 5px;
+  font-size: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  border: 1px solid #000;
+  opacity: 0.8;
+}
+
+
