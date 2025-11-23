@@ -1,4 +1,10 @@
-<div class='daniel'><span class='pseudo' >Pseudo  </span><br>
+<div class='daniel'><span class='pseudo' >Pseudo : a a</span><br><br>
+<p class='message' >je suis un commentaire particulier </p><br>
+    <span class='date'> Message envoyé le : 2025/11/21 | 09:54 AM</span><br>
+    
+    
+</div>
+<br><div class='daniel'><span class='pseudo' >Pseudo  </span><br>
 <p class='message' >Rejoindre la discussion </p><br>
     <span class='date'> Message envoyé le : 2025/11/18 | 09:07 PM</span><br><br>
     
