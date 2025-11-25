@@ -15,6 +15,17 @@ a {
     cursor: pointer;
 }
 
+#h1com{
+  position: absolute;
+  left: 18vw;
+  top: 8vh;  
+  color: #2c33b3;
+  font-family: 'Lexend Tera';
+  font-size: 3vw;
+  z-index: 2;
+}
+
+
 .title{
      position: absolute;
   left: 45%;  color: #2c33b3;

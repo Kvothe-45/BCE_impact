@@ -75,15 +75,15 @@
   padding: 10px;
   line-height: 20px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 11px;
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 .legend i {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   float: left;
-  margin-right: 8px;
+  margin-right: 5px;
   border: 1px solid #000;
   opacity: 0.8;
 }

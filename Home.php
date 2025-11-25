@@ -16,7 +16,7 @@
     
 <body>
     <?php include 'header.php'?>
-    <h2 id="h2his">Carte intéractive des pays de l'Union Européenne</h2>
+    <h1 id="h2his">Carte intéractive des pays de l'Union Européenne</h1>
     <div id="map"></div>
 
     <div id="boite_info">
@@ -101,16 +101,15 @@
           [85, 180]
       ],
       maxBoundsViscosity: 1.0
-    }).setView([46, 20], 3.6);
+    }).setView([46, 15], 3.5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 8,
       minZoom: 3,
     }).addTo(map);
 
-
+    //Couleur des pays en fonction de leur statut vis-à-vis de l'UE
     function styleCountries(feature) {
       const iso = feature.properties.adm0_a3_us || feature.id;
-
       if (zoneEuro.includes(iso)) {
           return { color: "#02354dff", fillColor: "#23189bff", weight: 1, fillOpacity: 0.8 }; // vert
       } else if (unionEuropeenne.includes(iso)) {

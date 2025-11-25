@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['client']) || !is_array($_SESSION['client'])) {
-      header('Location: http://localhost/BCE_impact/commentaire2.php');
+      header('Location: http://localhost/BCE-IMPACT/BCE_impact-1/commentaire2.php');
 ;
     exit;
 }
