@@ -153,7 +153,7 @@
 legend.addTo(map);
 
     // Chargement ici du GeoJSON des pays d'Europe (provenant de Natural Earth) 
-    fetch('custom.geo.json')
+    fetch('custom.geo(1).json')
       .then(res => res.json())
       .then(data => {
         L.geoJSON(data, {
