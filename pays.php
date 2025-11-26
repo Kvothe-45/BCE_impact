@@ -51,31 +51,55 @@ if (isset($_GET['pays'])) {
                     <div class="info-box"><strong>Langue officielle : </strong> <span><?php echo $pays['langue']; ?></span></div>
                     <div class="info-box"><strong>Monnaie : </strong> <span><?php echo $pays['monnaie']; ?></span></div>
                     <div class="info-box"><strong>Forme de l’Etat  : </strong> <span><?php echo $pays['etat']; ?></span></div>
-                    <div class="info-box"><strong>Membre : </strong> <span><?php echo $pays['membre']; ?></span></div>
-                    <div class="info-box"><strong>Liste de médias : </strong> <span><?php echo $pays['media']; ?></span></div>
-                    <div class="info-box"><strong>Dette publique : </strong> <span><?php echo $pays['dette']; ?></span></div>
-                    <div class="info-box"><strong>Déficit publique : </strong> <span><?php echo $pays['deficit']; ?></span></div>
-                    <div class="info-box"><strong>ZES : </strong> <span><?php echo $pays['zes']; ?></span></div>
+                    <div class="info-box"><strong>Espérance de vie : </strong> <span><?php echo $pays['vie']; ?></span></div>
+                    <div class="info-box"><strong>IDH : </strong> <span><?php echo $pays['idh']; ?></span></div>
+                    <div class="info-box"><strong>GINI : </strong> <span><?php echo $pays['gini']; ?></span></div>
+                    <div class="info-box"><strong>EPI : </strong> <span><?php echo $pays['epi']; ?></span></div>
+                    <div class="info-box"><strong>CO2/hab : </strong> <span><?php echo $pays['co2']; ?></span></div>
+                    <div class="info-box"><strong>RSF : </strong> <span><?php echo $pays['rsf']; ?></span></div>
+                    <div class="info-box"><strong>Indice de perception de la corruption : </strong> <span><?php echo $pays['corruption']; ?></span></div>
+                    <div class="info-box"><strong>SMIC : </strong> <span><?php echo $pays['smic']; ?></span></div>
+                    <div class="info-box"><strong>PIB : </strong> <span><?php echo $pays['pib']; ?></span></div>
                 </div>
             </section>
             
             <section class="section-contenu">
+                <h3>Histoire</h3>
                 <?php echo $pays['histoire']; ?>
             </section>
 
             <section class="section-contenu">
-                <?php echo $pays['geographie']; ?>
-            </section>
-
-            <section class="section-contenu">
+                <h3>Économie et investissements</h3>
                 <?php echo $pays['economie']; ?>
             </section>
 
             <section class="section-contenu">
-                <?php echo $pays['societe']; ?>
+                <h3>Santé et Protection Sociale</h3>
+                <?php echo $pays['sante']; ?>
             </section>
 
             <section class="section-contenu">
+                <h3>Religions</h3>
+                <?php echo $pays['religion']; ?>
+            </section>
+
+            <section class="section-contenu">
+                <h3>Les modes de vie</h3>
+                <?php echo $pays['mode_vie']; ?>
+            </section>
+
+            <section class="section-contenu">
+                <h3>Géographie</h3>
+                <?php echo $pays['geographie']; ?>
+            </section>
+
+            <section class="section-contenu">
+                <h3>Le Sport</h3>
+                <?php echo $pays['sport']; ?>
+            </section>
+
+            <section class="section-contenu">
+                <h3>Politique</h3>
                 <?php echo $pays['politique']; ?>
             </section>
 
@@ -103,7 +127,7 @@ if (isset($_GET['pays'])) {
             <li><a href="quisommesnous.php">Contact</a></li>
         </ul>
     </footer>
-</div>
+    </div>
 </body>
 
 </html>
