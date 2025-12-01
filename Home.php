@@ -109,7 +109,7 @@
 
     //Couleur des pays en fonction de leur statut vis-à-vis de l'UE
     function styleCountries(feature) {
-      const iso = feature.properties.adm0_a3_us || feature.id;
+      const iso = feature.properties.adm0_a3;
       if (zoneEuro.includes(iso)) {
           return { color: "#02354dff", fillColor: "#23189bff", weight: 1, fillOpacity: 0.8 }; // vert
       } else if (unionEuropeenne.includes(iso)) {
@@ -129,7 +129,7 @@
       });
       
       layer.on('click', function(e) {
-        var iso = feature.properties.adm0_a3_us || feature.id;
+        var iso = feature.properties.adm0_a3;
         if (iso) {
             window.location.href = "pays.php?pays=" + iso;
         }
@@ -153,7 +153,7 @@
 legend.addTo(map);
 
     // Chargement ici du GeoJSON des pays d'Europe (provenant de Natural Earth) 
-    fetch('custom.geo(1).json')
+    fetch('custom.geojson')
       .then(res => res.json())
       .then(data => {
         L.geoJSON(data, {
