@@ -102,7 +102,23 @@ if (isset($_GET['pays'])) {
                 <h3>Politique</h3>
                 <?php echo $pays['politique']; ?>
             </section>
+        
+        <?php }else if (!isset($_GET['pays'])){ ?>
+            <h2 id="h2pays">Pays de l'UE</h2>
+            <div class="liste-pays">
 
+            <?php  
+            $req = $bdd->query("SELECT nom_pays, drapeau, code FROM pays ORDER BY nom_pays ASC");
+            while ($row = $req->fetch()) { ?>
+                
+                <a href="?pays=<?php echo $row['code']; ?>" class="flag-card">
+                    <img src="<?php echo $row['drapeau']; ?>" alt="Drapeau <?php echo $row['nom_pays']; ?>">
+                    <p><?php echo $row['nom_pays']; ?></p>
+                </a>
+            <?php } ?>
+
+            </div>
+        
         <?php }else{ ?>
             
             <div class="error-msg">

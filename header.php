@@ -27,7 +27,7 @@
             <li><a href="definitions.php">Définitions</a></li>
             <li><a href="graphique.php">Statistiques</a></li>
             <li><a href="histoire.php">La BCE et son histoire</a></li>
-            <li><a href="histoire.php">Les pays de l'UE</a></li>
+            <li><a href="pays.php">Les pays de l'UE</a></li>
             <li><a href="commentaire.php">Commentaires</a></li>
             <li><a href="quisommesnous.php">Contact</a></li>
             <li><a href="sources.php">Sources</a></li>

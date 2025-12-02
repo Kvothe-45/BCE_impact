@@ -12,7 +12,7 @@ body {
 }
 
 .header-pays {
-    background: white;
+    background: lightgray;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -63,3 +63,42 @@ body {
 .section-contenu li { margin-bottom: 8px; }
 
 .error-msg { text-align: center; color: #d9534f; font-size: 1.2em; padding: 50px; }
+
+.liste-pays {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.flag-card {
+    width: 140px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: transform .2s, box-shadow .2s;
+    background: lightgray;
+}
+
+.flag-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.flag-card:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+#h2pays{
+    text-align: center;
+    left: 35vw;
+    top: 10vh;  
+    color: #2c33b3;
+    font-family: 'Lexend Tera';
+    font-size: 2vw;
+    margin-bottom: 40px;
+}
