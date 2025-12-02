@@ -102,3 +102,24 @@ body {
     font-size: 2vw;
     margin-bottom: 40px;
 }
+
+.actions-graphiques {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.btn-graph {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #003399;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-graph:hover {
+    background-color: #002266;
+}

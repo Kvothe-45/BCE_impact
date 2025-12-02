@@ -63,6 +63,12 @@ if (isset($_GET['pays'])) {
                 </div>
             </section>
             
+            <div class="actions-graphiques" style="margin: 20px 0; text-align: center;">
+                <a href="graphique.php?pays=<?php echo $pays['nom_pays']; ?>&type=inflation" class="btn-graph">Inflation</a>
+                <a href="graphique.php?pays=<?php echo $pays['nom_pays']; ?>&type=dette" class="btn-graph">Dette</a>
+                <a href="graphique.php?pays=<?php echo $pays['nom_pays']; ?>&type=chomage" class="btn-graph">Chômage</a>
+            </div>
+
             <section class="section-contenu">
                 <h3>Histoire</h3>
                 <?php echo $pays['histoire']; ?>

@@ -2,6 +2,8 @@
 	include 'bd.php';
 	$bdd = getBD();
 	$rep = $bdd->query("SELECT nom_pays FROM pays ORDER BY nom_pays ASC");
+  $get_pays = isset($_GET['pays']) ? $_GET['pays'] : null;
+  $get_type = isset($_GET['type']) ? $_GET['type'] : null;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,11 +27,11 @@
       <div id="filters">
         <h3>Indicateurs</h3>
         <div id="indicateurs">
-          <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="inflation"> Inflation (%)</label>
-          <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="dette"> Dette publique (% du PIB)</label>
-          <label><input type="checkbox" onclick="chomage()" value="chomage"> Chômage</label>
+          <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="inflation" <?php if($get_type == 'inflation') echo 'checked'; ?>> Inflation (%)</label>
+          <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="dette" <?php if($get_type == 'dette') echo 'checked'; ?>> Dette publique (% du PIB)</label>
+          <label><input type="checkbox" onclick="chomage()" value="chomage" <?php if($get_type == 'chomage') echo 'checked'; ?>> Chômage</label>
           <div id="chom">
-            <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="chomage_pourcent"> Chômage (%)</label>
+            <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="chomage_pourcent" <?php if($get_type == 'chomage') echo 'checked'; ?>> Chômage (%)</label>
             <label><input type="checkbox" onclick="afficherGraphique()" name="ind" value="chomage_nombre"> Chômage (millier de personnes)</label>
           </div>
         </div>
@@ -45,7 +47,7 @@
         <h3>Pays</h3>
         <div id="pays">
           <?php while ($ligne = $rep->fetch()) { ?>
-            <label><input type="checkbox" onclick="afficherGraphique()" name="pays" value="<?php echo $ligne['nom_pays']; ?>"><?php echo $ligne['nom_pays']; ?></label>
+            <label><input type="checkbox" onclick="afficherGraphique()" name="pays" value="<?php echo $ligne['nom_pays']; ?>" <?php if($get_pays == $ligne['nom_pays']) echo 'checked'; ?>><?php echo $ligne['nom_pays']; ?></label>
 			    <?php } 
 			    $rep -> closeCursor(); ?>
         </div>
