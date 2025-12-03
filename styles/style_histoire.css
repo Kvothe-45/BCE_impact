@@ -1,31 +1,57 @@
 
 #h2his{
-     position: absolute;
-  left: 35vw;
-  top: 10vh;  
+  position: absolute;
+  left: 32vw;
+  top: 70px;  
   color: #2c33b3;
   font-family: 'Lexend Tera';
-  font-size: 2vw;
+  font-size: 1.8rem;
   z-index: 2;
 }
 
-.boite_histoire{
+#boite_histoire{
   position: relative;
-	top: 5%;
-  background-color:#d9dbfa
-; 
-  border-radius: 8px; 
-  padding: 25px; 
-  margin: 20px auto; 
-  width: 40%; 
-  line-height: 1.6;
+  width: 60%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
+#init_text{
+    margin-bottom: 15px;
+
+}
+
+.title_para{
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+#last_para{
+  margin-top: 45px;
+}
+#liste_phase{
+  text-decoration: none;
+  list-style:none;
+  margin:10px 0 10px 15px;
+}
+#liste_phase>li{
+margin-bottom: 8px;
+}
+
+#last_comment{
+  margin-top: 15px;
+}
 
 .Guerre {
   position: absolute;
   top: 7%;
-  left: -17%;
+  left: -18%;
   width: 20%;
   transform: rotate(4deg);
 }
@@ -33,7 +59,7 @@
 .Assemblée{
     position: absolute;
   top: 25%;
-  left: -17%;
+  left: -19%;
   width: 20%;
   transform: rotate(-4deg);
 }
@@ -50,14 +76,15 @@
 .OTAN{
         position: absolute;
   top: 15%;
-  left: 93%;
+  left: 97%;
   width: 20%;
   transform: rotate(-6deg);
 }
 
-.Schuman{position: absolute;
+.Schuman{
+  position: absolute;
   top: 35%;
-  left: 95%;
+  left: 97%;
   width: 20%;
   transform: rotate(-6deg);
 
@@ -65,7 +92,7 @@
 
 .Parlement{position: absolute;
   top: 55%;
-  left: 95%;
+  left: 97%;
   width: 20%;
   transform: rotate(-6deg);
 
