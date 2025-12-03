@@ -15,17 +15,6 @@ a {
     cursor: pointer;
 }
 
-#h1com{
-  position: absolute;
-  left: 18vw;
-  top: 8vh;  
-  color: #2c33b3;
-  font-family: 'Lexend Tera';
-  font-size: 3vw;
-  z-index: 2;
-}
-
-
 .title{
      position: absolute;
   left: 45%;  color: #2c33b3;
@@ -78,4 +67,20 @@ a {
 .pseudo{
     color: #2c33b3;
   font-size: 30px;
+}
+
+.deconnexion {
+  position : absolute;
+  top: 83%;
+  left: 75%;
+  display: block;
+  width: 30%;
+  background: #4349FF;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  font-size: 25px;
+  font-weight: 600;
+  height: 45px;
+  cursor: pointer;
 }
