@@ -23,6 +23,7 @@
   <p>Email <input type="mail" id="mail" name="mail" ></p>
     <div class="password-requirements">
       <p class="requirement hidden error" id="email-error">Adresse mail invalide </p>
+      <p class="requirement hidden error" id="email-utilisé">Adresse mail deja utilisé </p>
     </div>
     <div class="savanier">
       <p class="requirement hidden success" id="mail-reussit">Adresse mail valide !</p>
@@ -30,7 +31,7 @@
 
   <p>Mot de passe <input type="password" id='mdp1' name="mdp1"></p>
   <div class="password-requirements">
-      <p class="requirement hidden error" id="mdp-error">Le mot de passe doit contenir 1 majuscule, 1 caractere special et 1 chiffre </p>
+      <p class="requirement hidden error" id="mdp-error">Le mot de passe doit contenir 1 majuscule, 1 caractere special et 1 chiffre et faire 7 caracteres </p>
   </div>
   <div class="savanier">
       <p class="requirement hidden success" id="mdp-reussit">Mot de passe valide !</p>
@@ -40,14 +41,12 @@
   <button type="submit" class="envoyer">Enregistrement</button>
 </form>
 </div>
-
 <script>
 const matchMDP = document.getElementById("mdp-error"); 
 const matchMail = document.getElementById("email-error");
-const matchConfirm = document.getElementById("match"); 
 const mdpbon = document.getElementById("mdp-reussit");
 const mailbon = document.getElementById("mail-reussit");
-const mdpbonConfirm = document.getElementById("mdp-reussit-confirm");
+const mailutilisé = document.getElementById("email-utilisé"); 
 
 $(document).ready(function() {
   $('#formemail').submit(function(e) {
@@ -57,18 +56,28 @@ $(document).ready(function() {
     const mdp1 = $('#mdp1').val().trim();
     const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     const regexMdp = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+
     document.querySelectorAll('.requirement').forEach(el => el.classList.add('hidden'));
     $('#message').html('');
 
-    var bool = true;
+    let valid = true;
 
-    if (!regexEmail.test(email)) { matchMail.classList.remove('hidden'); bool= false; } 
-    else { mailbon.classList.remove('hidden'); }
+    if (!regexEmail.test(email)) { 
+      matchMail.classList.remove('hidden'); 
+      valid = false; 
+    } else { 
+      mailbon.classList.remove('hidden'); 
+    }
 
-    if (!regexMdp.test(mdp1)) { matchMDP.classList.remove('hidden'); bool = false; } 
-    else { mdpbon.classList.remove('hidden'); }
+    if (!regexMdp.test(mdp1)) { 
+      matchMDP.classList.remove('hidden'); 
+      valid = false; 
+    } else { 
+      mdpbon.classList.remove('hidden'); 
+    }
 
-    if (!bool) return;
+    if (!valid) return; 
 
     $.ajax({
       url: "enregistrement.php",
@@ -76,32 +85,39 @@ $(document).ready(function() {
       data: $('#formemail').serialize(),
       dataType: "json",
       success: function(response) {
+        document.querySelectorAll('.requirement').forEach(el => el.classList.add('hidden'));
+
         if (response.success) {
           $('#message').html('<p class="success">' + response.message + '</p>');
-          setTimeout(() => { window.location.href = 'Home.php'; }, 1000);
+          setTimeout(() => { window.location.href = 'commentaire.php'; }, 1000);
         } else {
-          $('#message').html('<p class="error">' + response.message + '</p>');
+          if (response.message.includes("déjà utilisée")) {
+
+            mailutilisé.classList.remove('hidden');
+            return;
+          } else {
+            $('#message').html('<p class="error">' + response.message + '</p>');
+          }
         }
-      },
+      }
     });
   });
 });
+
 </script>
 </div>
-<div id="footer">
-    <footer>
-        <a href="Home.php">
-            <img src="images/logo.png" alt="Logo de BCE Impact">
-        </a>
-        <h2>Projet L3 MIASHS</h2>
-        <ul>
-            <li><a href="sources.php">Pour aller plus loin</a></li>
-            <li><a href="commentaires.php">Commentaires</a></li>
-            <li><a href="sources.php">Sources</a></li>
-            <li><a href="quisommesnous.php">Contact</a></li>
-        </ul>
-    </footer>
-</div>
+<footer>
+    <a href="Home.html">
+        <img src="images/logo.png" alt="Logo de BCE Impact">
+    </a>
+    <h2>Projet L3 MIASHS</h2>
+    <ul>
+        <li><a>Pour aller plus loin</a></li>
+        <li><a>Commentaires</a></li>
+        <li><a>Sources</a></li>
+        <li><a>Contact</a></li>
+    </ul>
+</footer>
 </body>
 
 </html>
