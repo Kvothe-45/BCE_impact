@@ -22,6 +22,16 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+-- Structure de la table `clients`
+--
+
+DROP TABLE IF EXISTS `clients`;
+CREATE TABLE IF NOT EXISTS `clients` (
+  `nom` text,
+  `prenom` text,
+  `email` text,
+  `mdp` text
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Structure de la table `chomage`
