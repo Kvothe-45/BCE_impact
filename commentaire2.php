@@ -8,7 +8,9 @@ if (file_exists("commentaires.txt")) {
         fclose($vieux);
     }
 }
-
+if (isset($_POST['connexion'])) {       
+    header('Location: http://localhost/BCE-IMPACT/BCE_impact-1/connexion.php');      
+}
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +28,9 @@ if (file_exists("commentaires.txt")) {
 <h1 class="title"> Commentaires</h1>
 <p class="ameliorer"> Partie commentaires pour améliorer le </br> site BCE IMPACT ! Cependant pour pouvoir mettre un commentaire vous devez être connecté</p>
 </div>
+<form method="post">
   <button type="submit" name="connexion" class="connexion">Connexion</button>
+  </form>
 <div >
     <?php echo ($ancien); ?>  
 </div> <footer>
