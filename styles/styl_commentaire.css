@@ -75,6 +75,23 @@ a {
   left: 75%;
   display: block;
   width: 30%;
+ background: #4349FF;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  border-radius: 0px;
+  font-size: 25px;
+  font-weight: 600;
+  height: 45px;
+  cursor: pointer;
+}
+
+.connexion {
+ position : absolute;
+  top: 10%;
+  left: 85%;
+  display: block;
+  width: 15%;
   background: #4349FF;
   color: white;
   border: none;
