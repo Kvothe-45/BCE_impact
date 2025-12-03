@@ -61,7 +61,7 @@ if (isset($_POST['Deconnexion'])) {
     <input type="submit" name="envoyer" value="Envoyer" class="envoyer">
 </form>
 <form method="post">
-    <button type="submit" name="Deconnexion">Déconnexion</button>
+  <button type="submit" name="Deconnexion" class="deconnexion">Déconnexion</button>
 </form>
 </div>
 <div >
