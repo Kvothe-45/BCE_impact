@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['client']) || !is_array($_SESSION['client'])) {
-      header('Location: http://localhost/BCE-IMPACT/BCE_impact-1/connexion.php');
-;
-    exit;
-}
 $prenom = isset($_SESSION['client']['prenom']) ? ($_SESSION['client']['prenom']) : '';
 $nom = isset($_SESSION['client']['nom']) ? ($_SESSION['client']['nom']) : '';
 
@@ -54,16 +49,32 @@ if (isset($_POST['Deconnexion'])) {
 
 <?php include "header.php"; ?>
 <h1 class="title"> Commentaires</h1>
-<p class="ameliorer"> Partie commentaires pour améliorer le </br> site BCE IMPACT !</p>
+
 <div class="lecommentaire">
-<form action="" method="post">
-    <textarea rows="15" cols="75" name="commentaires"> </textarea>
-    <input type="submit" name="envoyer" value="Envoyer" class="envoyer">
-</form>
-<form method="post">
-  <button type="submit" name="Deconnexion" class="deconnexion">Déconnexion</button>
-</form>
-</div>
+<?php if (isset($_SESSION['client']['prenom'])) : ?> <form action="" method="post">
+    <p class="ameliorer"> Partie commentaires pour améliorer le </br> site BCE IMPACT !</p>
+        <textarea rows="15" cols="75" name="commentaires"> </textarea>
+        <input type="submit" name="envoyer" value="Envoyer" class="envoyer">
+    </form>
+    <form method="post">
+        <button type="submit" name="Deconnexion" class="deconnexion">Déconnexion</button>
+    </form>
+<?php 
+else: ?>
+    <p class="non_connecte">
+        
+<p class="ameliorer"> Partie commentaires pour améliorer le </br> site BCE IMPACT ! Cependant pour pouvoir mettre un commentaire vous devez être connecté</p>
+        <br><br>
+        <form method="post">
+  <button type="submit" name="connexion" class="connexion">Connexion</button>
+  </form>
+    </p>
+<?php if (isset($_POST['connexion'])) {
+    header('Location: connexion.php');
+}
+?>    
+<?php endif; ?>
+
 <div >
     <?php echo ($ancien); ?>  
 </div> <footer>
@@ -81,4 +92,3 @@ if (isset($_POST['Deconnexion'])) {
 
 </body>
 </html>
-
