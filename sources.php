@@ -50,10 +50,10 @@
         <p>Voici la principale source utilisée pour chaque pays :</p>
         <ul class="list">
 <li><a href="https://www.diplomatie.gouv.fr/fr/dossiers-pays/allemagne/presentation-de-l-allemagne/">Allemagne</a></li>
-<li><a href="">Autriche</a></li>
-<li><a href="">Belgique</a></li>
+<li><a href="https://www.austria.info/fr/inspiration/geschichte-oesterreich/">Autriche</a></li>
+<li><a href="https://www.belgium.be/fr/la_belgique/connaitre_le_pays/histoire/la_belgique_a_partir_de_1830">Belgique</a></li>
 <li><a href="https://european-union.europa.eu/principles-countries-history/eu-countries/cyprus_fr">Chypre  </a></li>
-<li><a href="">Espagne</a></li>
+<li><a href="https://www.spain.info/fr/decouvrir-espagne/histoire-grandes-civilisations-espagne/">Espagne</a></li>
 <li><a href="https://www.cavalngo.com/guide-voyage/infos-pratiques-pays/details/24/134-histoire-estonie.html">Estonie</a></li>
 <li><a href="https://fr.wikipedia.org/wiki/France">France</a></li>
 <li><a href="">Grèce</a></li>
@@ -64,10 +64,10 @@
 <li><a href="">Luxembourg </a></li>
 <li><a href="https://www.lepetitmaltais.com/histoire-de-malte/">Malte</a></li>
 <li><a href="https://www.strasbourg-europe.eu/pays-bas/">Pays-Bas </a></li>
-<li><a href="">Portugal </a></li>
+<li><a href="https://www.portugal.fr/Lhistoire-du-Portugal-a-travers-les-ages.html">Portugal </a></li>
 <li><a href="https://sk.ambafrance.org/La-Slovaquie-en-quelques-dates">Slovaquie</a></li>
-<li><a href="">Slovénie</a></li>
-<li><a href="">Croatie </a></li>
+<li><a href="https://www.slovenie-voyage.com/histoire/">Slovénie</a></li>
+<li><a href="https://www.croatietourisme.com/histoire-croatie/">Croatie </a></li>
         </ul>
 
     </main>
