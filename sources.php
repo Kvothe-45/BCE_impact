@@ -12,7 +12,7 @@
 
     <main class="container">
 
-        <h2>Sources</h2>
+        <h2 id="title_src">Sources</h2>
         <p class="intro">Notre base de données tient ses tables des sources suivantes :</p>
 
         <ul class="list">
@@ -49,21 +49,21 @@
         </ul>
         <p>Voici la principale source utilisée pour chaque pays :</p>
         <ul class="list">
-<li><a href="">Allemagne</a></li>
+<li><a href="https://www.diplomatie.gouv.fr/fr/dossiers-pays/allemagne/presentation-de-l-allemagne/">Allemagne</a></li>
 <li><a href="">Autriche</a></li>
 <li><a href="">Belgique</a></li>
-<li><a href="">Chypre  </a></li>
+<li><a href="https://european-union.europa.eu/principles-countries-history/eu-countries/cyprus_fr">Chypre  </a></li>
 <li><a href="">Espagne</a></li>
 <li><a href="https://www.cavalngo.com/guide-voyage/infos-pratiques-pays/details/24/134-histoire-estonie.html">Estonie</a></li>
-<li><a href="">France</a></li>
+<li><a href="https://fr.wikipedia.org/wiki/France">France</a></li>
 <li><a href="">Grèce</a></li>
-<li><a href="">Irlande </a></li>
+<li><a href="https://www.destination-irlande.com/conseils-voyage/tout-savoir">Irlande </a></li>
 <li><a href="">Italie </a></li>
 <li><a href="https://www.cavalngo.com/guide-voyage/infos-pratiques-pays/details/24/135-histoire-lettonie.html">Lettonie </a></li>
 <li><a href="">Lituanie</a></li>
 <li><a href="">Luxembourg </a></li>
-<li><a href="">Malte</a></li>
-<li><a href="">Pays-Bas </a></li>
+<li><a href="https://www.lepetitmaltais.com/histoire-de-malte/">Malte</a></li>
+<li><a href="https://www.strasbourg-europe.eu/pays-bas/">Pays-Bas </a></li>
 <li><a href="">Portugal </a></li>
 <li><a href="https://sk.ambafrance.org/La-Slovaquie-en-quelques-dates">Slovaquie</a></li>
 <li><a href="">Slovénie</a></li>

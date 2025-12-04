@@ -45,8 +45,12 @@ margin-bottom: 8px;
 }
 
 #last_comment{
-  margin-top: 15px;
+  margin-top: 20px;
 }
+#last_comment>p{
+  margin-bottom:8px ;
+}
+
 
 .Guerre {
   position: absolute;

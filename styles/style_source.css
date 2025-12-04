@@ -26,12 +26,13 @@ a {
     gap: 25px;
 }
 
-h2 {
+#title_src {
     color: #2c33b3;
     font-size: 45px;
     text-align: center;
     margin-bottom: 20px;
     font-family: 'Lexend Tera', sans-serif;
+    margin-top: -70px;
 }
 
 h3 {

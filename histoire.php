@@ -33,8 +33,12 @@
 <h4 class="title_para">7 février 1992 – Traité de Maastricht</h4>
 <p>Le traité sur l'Union européenne est signé à Maastricht, aux Pays-Bas. Il représente une avancée majeure, car il établit des règles claires pour la future monnaie unique, la politique étrangère et de sécurité et une coopération plus étroite dans les domaines de la justice et des affaires intérieures. L’«Union européenne» est officiellement créée par le traité, qui entre en vigueur le 1er novembre 1993.</p>
 <p id="last_para">
-En juin 1988, le Conseil européen a confirmé l’objectif  de l’instauration, par étapes, d’une Union économique et monétaire (UEM).</br>
-Il a chargé un comité placé sous la présidence de Jacques Delors, président de la Commission européenne, d’étudier et de proposer les  étapes concrètes devant mener à cette union.</br>
+En juin 1988, le Conseil européen a confirmé l’objectif  de l’instauration, par étapes, d’une Union économique et monétaire (UEM).
+</p>
+<p>
+Il a chargé un comité placé sous la présidence de Jacques Delors, président de la Commission européenne, d’étudier et de proposer les  étapes concrètes devant mener à cette union.
+</p>
+<p>
 Ce comité comprenait les gouverneurs des banques  centrales nationales de la Communauté européenne ainsi que MM. Alexandre Lamfalussy, alors Directeur général de la Banque des règlements  internationaux, Niels Thygesen, professeur d’économie au Danemark, et  Miguel Boyer, alors président du Banco Exterior de España.
 Le Rapport Delors rédigé par ce comité proposait trois phase successives pour réaliser l’UEM :
 </p>
@@ -45,9 +49,14 @@ Le Rapport Delors rédigé par ce comité proposait trois phase successives pour
 </ul>
 <p>Pour plus d'information cliquer <a href="https://www.ecb.europa.eu/ecb/history-arts-culture/history/emu/html/index.fr.html">ICI</a>
 </p>
-<p id="last_comment">Aujourd'hui, l'Union européenne compte 27 pays membres mais sept d’entre eux n’utilisent pas l’euro comme monnaie courante.</br> En effet, une adhésion à l’Union européenne n’induit pas nécessairement l’adoption de la monnaie unique ! </br></br>Pour adopter la monnaie unique, la Commission européenne et la Banque centrale européenne évaluent ensemble si les pays candidats à l’euro remplissent les conditions nécessaires à l’adoption de la monnaie unique.</br> Après examen des progrès réalisés selon les critères de convergence, elles présentent leurs conclusions dans des rapports distincts. </br>Ces rapports sont ensuite approuvés par le Conseil ECOFIN, en concertation avec le Parlement européen et les chefs d’État. </br>En cas d’avis favorable, le processus d’intégration à la zone euro peut alors être engagé. 
+<div id="last_comment">
+<p >Aujourd'hui, l'Union européenne compte 27 pays membres mais sept d’entre eux n’utilisent pas l’euro comme monnaie courante.
+</p><p> En effet, une adhésion à l’Union européenne n’induit pas nécessairement l’adoption de la monnaie unique ! </p>
+<p>Pour adopter la monnaie unique, la Commission européenne et la Banque centrale européenne évaluent ensemble si les pays candidats à l’euro remplissent les conditions nécessaires à l’adoption de la monnaie unique.</p> 
+<p>Après examen des progrès réalisés selon les critères de convergence, elles présentent leurs conclusions dans des rapports distincts. </p>
+<p>Ces rapports sont ensuite approuvés par le Conseil ECOFIN, en concertation avec le Parlement européen et les chefs d’État. </br>En cas d’avis favorable, le processus d’intégration à la zone euro peut alors être engagé. 
 </p>
-
+</div>
 
 <img class="Guerre" src="Images_histoire/guerrefinie.jpg" alt= "La guerre est "/>
 <img class="Assemblée" src="Images_histoire/hommes.jpg" alt="Assemblée "/>

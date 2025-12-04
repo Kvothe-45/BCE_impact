@@ -21,19 +21,23 @@
 
     <div id="boite_info">
         <h3 id="title_boite">La Banque centrale européenne : le gardien de l’euro</h3>
-        <p id="par1">La Banque centrale européenne (BCE) est l'institution chargée de mener la politique monétaire au sein de la zone euro. La politique monétaire de la zone euro est définie par l'Eurosystème qui rassemble la BCE et les banques centrales des États membres de la zone euro.
+        <p id="par1">La Banque centrale européenne (BCE) est l'institution chargée de mener la politique monétaire au sein de la zone euro. La politique monétaire de la zone euro est définie par l'Eurosystème qui rassemble la BCE et les banques centrales des États membres de la zone euro. Ainsi, chaque banque d'Europe dispose d'un compte auprès de la BCE.
         </p>
         <p id="par3">La BCE a pour mission de maintenir la stabilité des prix, gérer les réserves et conduire les opérations de change. La BCE est une institution indépendante vis-à-vis du pouvoir politique.
         </p>
         <p id="par2">
-        La BCE dispose de plusieurs outils pour agir sur l’économie, et chacun a un impact direct ou indirect sur la vie quotidienne des citoyens et des entreprises.
+        La BCE dispose de plusieurs outils pour agir sur l’économie, et chacun a un impact direct ou indirect sur la vie quotidienne des citoyens et des entreprises. 
         </p>
         <ul>
-            <li class="outils">1. Les taux d’intérêt</li>
-            <li class="listetitre">La BCE fixe les taux directeurs, c’est-à-dire le taux auquel les banques peuvent emprunter de l’argent auprès d’elle.
+            <li class="outils">1. Les taux directeurs et les réserves obligatoires</li>
+            <li class="listetitre">La BCE impose à toutes les banques commerciales de « déposer » sur leur compte (auprès d'elle) un pourcentage des dépôts qu'elles collectent. Si le taux des réserves obligatoires est de 1 % et qu'elle accorde un crédit de 100€, elle doit alors déposer 1€ à la BCE. Elle fixe également les taux d'intérêts auxquels elle prête aux banques commerciales de la zone euro, ce qui permet de contrôler la masse monétaire et l'inflation. Pour cela, elle dispose de 3 taux directeurs :
             </li>
+            <li class="mesuresBCE">Facilité de dépôt : taux applicable à la facilité de dépôt, que les banques peuvent utiliser pour effectuer des dépôts au jour le jour auprès de l'Eurosystème à un taux d'intérêt prédéfini.(Il est de 2.00% aujourd'hui)</li>
+            <li class="mesuresBCE">Opérations principales de refinancement : taux d'intérêt appliqué aux opérations principales de refinancement. Dans le cadre de ces opérations, les banques peuvent emprunter des fonds à la BCE contre des garanties larges sur une base hebdomadaire à un taux d'intérêt prédéterminé. Ce taux est fixé au-dessus du taux de la facilité de dépôt. (Il est de 2.15% aujourd'hui)</li>
+            <li class="mesuresBCE">Facilité de prêt marginal : taux appliqué à la facilité de prêt marginal, qui offre aux banques des crédits au jour le jour contre des garanties larges à un taux d'intérêt prédéterminé. Ce taux est fixé au-dessus du taux des opérations principales de refinancement.(Il est de 2.40% aujourd'hui)</li>
+            <li class="listetitre">Pour mieux comprendre leurs impacts, voici les conséquences en cas de variation des taux directeurs : </li>
             <li class="mesuresBCE">Taux élevés → emprunter coûte plus cher → les ménages dépensent moins, les entreprises investissent moins → l’inflation ralentit.
-            </li><li class="mesuresBCE">Taux bas → emprunter coûte moins cher → les ménages dépensent davantage, les entreprises investissent → l’économie se stimule.
+            </li><li class="mesuresBCE">Taux bas → emprunter coûte moins cher → les ménages dépensent davantage, les entreprises investissent plus → l’économie se stimule, ce qui augmente l'inflation.
             </li>
             <li class="outils">2. Les opérations sur les marchés financiers</li>
             <li class="listetitre">La BCE peut acheter ou vendre des obligations, qui sont des prêts consentis aux États ou aux entreprises :
@@ -50,11 +54,11 @@
             </li>
             </ul>
         <p>
-        La BCE est le gardien de la stabilité de l’euro. Grâce à tous ses outils (plus d'info <a href="https://www.ecb.europa.eu/mopo/strategy/strategy-review/html/monetary-policy-instruments.fr.html">ici</a>), elle influence la quantité d’argent dans l’économie. Elle a pour objectif principal de veiller à la stabilité des prix, étayant ainsi la croissance économique et la création d'emplois. Néanmoins, elle doit aussi jongler avec d'autres objectifs tel que l'écologie, la pollution, etc...
+        La BCE est ainsi le gardien de la stabilité de l’euro. Grâce à tous ses outils (plus d'info <a href="https://www.ecb.europa.eu/mopo/strategy/strategy-review/html/monetary-policy-instruments.fr.html">ici</a>), elle influence la quantité d’argent dans l’économie. Elle a pour objectif principal de veiller à la stabilité des prix, étayant ainsi la croissance économique et la création d'emplois. Néanmoins, elle doit aussi jongler avec d'autres objectifs tel que l'écologie, la pollution, etc...
         </p>
         <p>
-        En résumé, quand la BCE agit, elle protège l’euro et soutient l’économie européenne, même si ses décisions semblent lointaines ou abstraites. C’est un acteur clé pour que l’argent circule de manière saine et que l’économie reste équilibrée.
-        </p>
+        Pour plus d'information sur la BCE, cliquez <a href="https://www.ecb.europa.eu/ecb/all-about-us/html/index.fr.html">ICI</a>
+      </p>
       </div>
 
 

@@ -58,7 +58,7 @@ if (isset($_GET['pays'])) {
                     <div class="info-box"><strong>CO2/hab : </strong> <span><?php echo $pays['co2']; ?></span></div>
                     <div class="info-box"><strong>RSF : </strong> <span><?php echo $pays['rsf']; ?></span></div>
                     <div class="info-box"><strong>Indice de perception de la corruption : </strong> <span><?php echo $pays['corruption']; ?></span></div>
-                    <div class="info-box"><strong>SMIC : </strong> <span><?php echo $pays['smic']; ?></span></div>
+                    <div class="info-box"><strong>Salaire minimum : </strong> <span><?php echo $pays['smic']; ?></span></div>
                     <div class="info-box"><strong>PIB : </strong> <span><?php echo $pays['pib']; ?></span></div>
                 </div>
             </section>
