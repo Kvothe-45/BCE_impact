@@ -8,8 +8,8 @@ if (file_exists("commentaires.txt")) {
         fclose($vieux);
     }
 }
-if (isset($_POST['connexion'])) {       
-    header('Location: http://localhost/BCE-IMPACT/BCE_impact-1/connexion.php');      
+if (isset($_POST['connexion'])) {
+    header('Location: connexion.php');
 }
 
 ?>
