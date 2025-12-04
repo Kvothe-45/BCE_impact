@@ -31,7 +31,7 @@ if ($client && password_verify($mdp, $client['mdp'])) {
         "email" => $client['email']
     );
 
-    echo '<meta http-equiv="refresh" content="0;url=Home.php">';
+    echo '<meta http-equiv="refresh" content="0;url=commentaire.php">';
 } else {
     ?> <script> alert("Mot de passe ou email incorrect")</script><?php
     echo '<meta http-equiv="refresh" content="0;url=connexion.php">';

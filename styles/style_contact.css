@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-h1{
+#title_qsn{
     text-align: center;
     color :#2c33b3;
   font-family: 'Lexend Tera';
@@ -21,12 +21,19 @@ h1{
 }
 
 body{
-    background-color: #d7e6f0
+    background-color: #d7e6f0;
+    height: 100vh;
 }
 
-p{
+#qsn_texte{
     font-family: 'Lexend Exa';
     font-size: 20px;
     margin: 50px;
     text-align: center;
+}
+
+#footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
