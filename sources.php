@@ -56,12 +56,12 @@
 <li><a href="https://www.spain.info/fr/decouvrir-espagne/histoire-grandes-civilisations-espagne/">Espagne</a></li>
 <li><a href="https://www.cavalngo.com/guide-voyage/infos-pratiques-pays/details/24/134-histoire-estonie.html">Estonie</a></li>
 <li><a href="https://fr.wikipedia.org/wiki/France">France</a></li>
-<li><a href="">Grèce</a></li>
+<li><a href="https://feelingo.com/carnet-voyage/la-grece-une-histoire-riche-a-l-origine-de-la-civilisation-occidentale">Grèce</a></li>
 <li><a href="https://www.destination-irlande.com/conseils-voyage/tout-savoir">Irlande </a></li>
-<li><a href="">Italie </a></li>
+<li><a href="https://www.monde-diplomatique.fr/mav/176/PIRONET/62954">Italie </a></li>
 <li><a href="https://www.cavalngo.com/guide-voyage/infos-pratiques-pays/details/24/135-histoire-lettonie.html">Lettonie </a></li>
-<li><a href="">Lituanie</a></li>
-<li><a href="">Luxembourg </a></li>
+<li><a href="https://eurel.prod.lamp.cnrs.fr/spip.php?article3578">Lituanie</a></li>
+<li><a href="https://www.justarrived.lu/generalites-luxembourg/histoire-luxembourg-capitale-europe/">Luxembourg </a></li>
 <li><a href="https://www.lepetitmaltais.com/histoire-de-malte/">Malte</a></li>
 <li><a href="https://www.strasbourg-europe.eu/pays-bas/">Pays-Bas </a></li>
 <li><a href="https://www.portugal.fr/Lhistoire-du-Portugal-a-travers-les-ages.html">Portugal </a></li>
@@ -89,3 +89,4 @@
 
 </body>
 </html>
+
