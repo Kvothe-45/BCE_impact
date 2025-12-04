@@ -27,6 +27,7 @@ if (!isset($_SESSION['CSRF_TOKEN'])) {
       <p>Email<input type="mail" name="email" value=""  /></p>
       <i class="ri-user-fill"></i>
       <p>Mot de passe <INPUT type="password" name="mdp" value=""></p>
+        <p> Vous n'avez pas encore de compte ? <a href="inscription.php">S'inscrire</a></p>
     </div>
 
 
