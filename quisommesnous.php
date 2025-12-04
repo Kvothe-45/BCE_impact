@@ -11,7 +11,7 @@
 
     <h1 id="title_qsn">Qui Sommes Nous</h1>
     <div id="block"><img id="image" src="Images/3bg.png" alt="exemple de texte alternatif"/></div>
-    <p id="qsn_texte">Nous sommes 3 étudiants de l'université Paul Valéry en licence MIASHS (Mathématiques et informatique appliquées </br> aux sciences humaines et sociales) et nous partageons une passion commune  pour l'informatique, l'économie et la géographie.</br> Nous avons créé ce site afin de  partager nos centres d'intérêts tout en les rendants accessible. </br> </br></br> </br>  Vous souhaitez nous faire un retour sur notre site ? 
+    <p id="qsn_texte">Nous sommes 3 étudiants de l'Université Paul Valéry en licence MIASHS (Mathématiques et informatique appliquées </br> aux sciences humaines et sociales) et nous partageons une passion commune  pour l'informatique, l'économie et la géographie.</br> Nous avons créé ce site afin de  partager nos centres d'intérêts tout en les rendants accessible. </br> </br></br> </br>  Vous souhaitez nous faire un retour sur notre site ? 
 </br>Laisser un commentaire <a href="commentaire.php">ici</a> ! </p>
 <div id="footer">
     <footer>
